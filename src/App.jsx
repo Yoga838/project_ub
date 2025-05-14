@@ -3,8 +3,8 @@ import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
 
-import Navbar from './component/navbar';
-import Footer from './component/footer';
+import Navbar from './component/landing/navbar';
+import Footer from './component/landing/footer';
 
 function App() {
   const [count, setCount] = useState(0);
