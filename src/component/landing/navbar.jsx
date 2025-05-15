@@ -7,9 +7,7 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
       <div className="container flex items-center justify-between px-4 py-4 mx-auto">
-        <span className="text-2xl font-bold text-black">
-          TailwindNav
-        </span>
+        <span className="text-2xl font-bold text-black">TailwindNav</span>
 
         {/* Hamburger icon */}
         <div className="md:hidden">
