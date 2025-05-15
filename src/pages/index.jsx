@@ -2,6 +2,7 @@ import React from "react";
 
 import Navbar from "../component/landing/navbar";
 import Footer from "../component/landing/footer";
+import Hero from "../../public/Pattern.png";
 import imgUp from "../assets/icons/graph-up.svg";
 import imgBook from "../assets/icons/book.svg";
 import imgEye from "../assets/icons/eye.svg";
@@ -12,181 +13,204 @@ import imgMegaphone from "../assets/icons/megaphone.svg";
 import imgAmplop from "../assets/icons/amplop.svg";
 import imgPhone from "../assets/icons/telephone.svg";
 import imgInstagram from "../assets/icons/instagram.svg";
+import imgStar1 from "../assets/icons/Star 1.svg";
 import { Link } from 'react-router-dom';
 
 export default function Test() {
   return (
     <>
       <Navbar />
-      <section id="hero" class="pt-24">
-        <div class="container bg-[url('/public/TopSection.png')] bg-cover bg-center h-full w-full">
-          <div className="grid grid-cols-12">
-            {/* texs kiri */}
-            <div className="flex items-center justify-center col-span-6">
-              <div>
-                <h1 class="text-3xl md:text-4xl font-bold text-gray-800 leading-snug">
-                  MEMBAWA{" "}
-                  <span class="text-blue-700 underline break-inside-avoid-column">
-                    PERUBAHAN
-                  </span>
-                  <br />
-                  MEWUJUDKAN MASA DEPAN.
-                </h1>
+      <section id="hero" className="">
+        <div className="relative w-full h-screen">
+          {/* Background Layer */}
+          <div className="absolute z-0 w-full h-full overflow-hidden">
+            <div className="absolute z-10 -left-[100px] -top-[40px] w-[280px] h-[280px] rounded-full bg-gray-700 blur-[150px]"></div>
+            <img
+              src={Hero}
+              alt=""
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+          </div>
+
+          {/* Foreground Content */}
+          <div className="z-10 flex items-center h-screen xl:px-20 md:px-10 px-10 relative">
+            <div className="grid grid-cols-12">
+              {/* Left Content */}
+              <div className="2xl:col-span-6 xl:col-span-6 md:col-span-6 col-span-12 flex justify-center md:justify-center xl:justify-start items-center text-center md:text-left">
                 <div className="">
-                  <p class="mt-4 text-gray-600">
-                    Dedikasi dan inovasi untuk masa depan kampus yang lebih
-                    maju.
-                  </p>
-                  <div class="mt-6 flex  gap-4">
-                    <a
-                      href="#"
-                      class="bg-gray-900 text-white px-6 py-2 rounded-lg font-medium hover:bg-gray-800 transition"
-                    >
+                  <div className="relative">
+                    <div className="hidden md:block absolute 2xl:left-[420px] xl:left-[420px] md:left-[280px] top-[-30px]">
+                      <img src={imgStar1} alt="" />
+                    </div>
+                    <h1 className="2xl:text-4xl xl:text-4xl lg:text-2xl md:text-xl text-xl font-bold text-gray-700 leading-snug">
+                      MEMBAWA{" "}
+                      <span className="text-blue-700 underline break-inside-avoid-column">
+                        PERUBAHAN
+                      </span>
+                      <br />
+                      MEWUJUDKAN MASA DEPAN.
+                    </h1>
+                    <p className="mt-4 2xl:text-base xl:text-base md:text-sm text-sm text-gray-700">
+                      Dedikasi dan inovasi untuk masa depan kampus yang lebih
+                      maju.
+                    </p>
+                  </div>
+                  <div className="mt-6 flex flex-col md:flex-row gap-4 md:justify-start justify-center">
+                    <button className="bg-gray-900 text-white px-6 py-2 rounded-lg font-medium hover:bg-gray-800 transition">
                       Program Kerja
-                    </a>
-                    <a
-                      href="#"
-                      class="border border-gray-400 text-gray-700 px-6 py-2 rounded-lg font-medium hover:bg-gray-100 transition"
-                    >
+                    </button>
+                    <button className="border border-gray-400 text-gray-700 px-6 py-2 rounded-lg font-medium hover:bg-gray-100 transition">
                       Kontak
-                    </a>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+
+              {/* Right Content */}
+              <div className="col-span-6 2xl:block xl:block lg:block md:block hidden">
+                <div className="relative xl:mt-20 md:mt-10 mt-10">
+                  <img
+                    src="/public/PakIqbal.png"
+                    alt="Foto"
+                    className="2xl:w-[665px] 2xl:h-[677px] xl:w-[665px] xl:h-[677px] md:w-[358px] md:h-[350px]"
+                  />
+                  <div className="absolute 2xl:top-[480px] xl:top-[480px] lg:top-[300px] md:top-[250px] 2xl:right-[80px] xl:right-[40px] md:right-[20px] bg-gray-700 2xl:w-[600px] 2xl:h-[90px] xl:w-[550px] xl:h-[90px] lg:w-[380px] md:w-[330px] md:h-[70px] 2xl:rounded-3xl xl:rounded-3xl md:rounded-2xl">
+                    <div className="flex justify-center h-full">
+                      <div className="flex 2xl:gap-[100px] xl:gap-[60px] lg:gap-[20px] md:gap-[15px] text-center items-center text-white">
+                        <div>
+                          <div className="2xl:text-5xl xl:text-5xl font-normal pb-1">5+</div>
+                          <div className="text-sm">Penelitian</div>
+                        </div>
+                        <div>
+                          <div className="2xl:text-5xl xl:text-5xl font-normal pb-1">3+</div>
+                          <div className="text-sm">Pengabdian Masyarakat</div>
+                        </div>
+                        <div>
+                          <div className="2xl:text-5xl xl:text-5xl font-normal pb-1">5+</div>
+                          <div className="text-sm">Publikasi</div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-span-6 relative">
-              <div class=" overflow-hidden relative z-10 justify-items-center">
-                <img
-                  src="public/PakIqbal.png"
-                  alt="Foto"
-                  class="w-[75%] object-cover"
-                />
-              </div>
-
-              <div class="absolute flex top-100 bg-[#1F2937] text-white rounded-2xl px-20 py-4 gap-10 text-center shadow-md md:ml-20 z-20">
-                <div>
-                  <div class="text-2xl font-bold">5+</div>
-                  <div class="text-sm">Penelitian</div>
-                </div>
-                <div>
-                  <div class="text-2xl font-bold">3+</div>
-                  <div class="text-sm">Pengabdian Masyarakat</div>
-                </div>
-                <div>
-                  <div class="text-2xl font-bold">5+</div>
-                  <div class="text-sm">Publikasi</div>
-                </div>
-              </div>
-            </div>
-          </div>
+          </div>  
         </div>
       </section>
 
-      <section id="about" class="my-20">
-        <div class="container">
+      <section id="about" className="xl:my-20 md:my-10 my-10">
+        <div className="">
           <div className="grid grid-cols-12">
             {/* foto kiri */}
-            <div className="col-span-5">
+            <div className="col-span-5 xl:block md:hidden hidden">
               <img
                 src="public/PakIqbal2.png"
                 alt="foto"
-                class="w-[70%] object-cover mx-auto"
+                className="w-[70%] object-cover mx-auto"
               />
             </div>
-            <div className="items-center justify-center col-span-7 -ml-10">
-              <h1 className="text-4xl font-bold">
-                Lebih Dekat dengan Mohammad Iqbal.
-              </h1>
-              <h2 className="pt-2 text-2xl font-semibold">
-                Visi, Kolaborasi, Inovasi untuk FIA UB Maju
-              </h2>
-              <p className="pr-20 text-lg text-justify pt-15">
-                Mohammad Iqbal adalah sosok pemimpin visioner yang memiliki
-                komitmen kuat dalam membawa perubahan positif. Dengan pengalaman
-                dan dedikasinya di dunia akademik serta manajerial, ia terus
-                berupaya menciptakan inovasi dalam sistem pendidikan, tata
-                kelola, dan pengembangan sumber daya manusia.
-              </p>
-              <p className="pt-5 pr-20 text-lg text-justify">
-                Sebagai individu yang percaya pada kekuatan visi, kolaborasi,
-                dan inovasi, Mohammad Iqbal bertekad untuk menjadikan FIA UB
-                sebagai institusi yang unggul, adaptif, dan berdaya
-                saing.bertekad untuk menjadikan FIA UB sebagai institusi yang
-                unggul, adaptif, dan berdaya saing.
-              </p>
-              {/* Kotak tentang saya */}
-              <div class="max-w-6xl mx-auto pr-20 py-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-                {/* <!-- Kartu 1 --> */}
-                <div class="bg-white border border-primary-50 hover:border-primary-700 rounded-xl p-6 shadow-sm">
-                  <div class="flex items-center gap-3 mb-4">
-                    {/* <!-- Ikon --> */}
-                    <img src={imgUp} alt="" className="w-6" />
-                    <h3 class="text-lg font-semibold text-gray-800">
-                      Rekam Jejak
-                    </h3>
+            <div className="xl:col-span-7 md:col-span-12 col-span-12">
+              <div className="flex xl:justify-normal md:justify-center justify-center">
+                <div className="xl:pr-20 md:pr-10 pr-10 xl:px-0 md:px-10 px-10">
+                  <h1 className="xl:text-4xl md:text-2xl text-xl font-bold">
+                    Lebih Dekat dengan Mohammad Iqbal.
+                  </h1>
+                  <h2 className="pt-2 xl:text-2xl md:text-xl text-lg font-semibold">
+                    Visi, Kolaborasi, Inovasi untuk FIA UB Maju
+                  </h2>
+                  <div className="py-10">
+                    <p className="xl:text-lg md:text-lg text-base text-justify">
+                      Mohammad Iqbal adalah sosok pemimpin visioner yang memiliki
+                      komitmen kuat dalam membawa perubahan positif. Dengan pengalaman
+                      dan dedikasinya di dunia akademik serta manajerial, ia terus
+                      berupaya menciptakan inovasi dalam sistem pendidikan, tata
+                      kelola, dan pengembangan sumber daya manusia.
+                    </p>
+                    <p className="pt-5 xl:text-lg md:text-lg text-base text-justify">
+                      Sebagai individu yang percaya pada kekuatan visi, kolaborasi,
+                      dan inovasi, Mohammad Iqbal bertekad untuk menjadikan FIA UB
+                      sebagai institusi yang unggul, adaptif, dan berdaya
+                      saing.bertekad untuk menjadikan FIA UB sebagai institusi yang
+                      unggul, adaptif, dan berdaya saing.
+                    </p>
                   </div>
-                  <p class="text-gray-600 mb-6">
-                    Kisah Mohammad Iqbal untuk kemajuan FIA UB
-                  </p>
-                  <Link
-                    to="/Tentang Saya/Rekam Jejak"
-                    className="inline-flex items-center gap-1 px-4 py-2 text-sm font-medium text-gray-700 transition border rounded-md border-primary-50 hover:bg-primary-700 hover:text-primary-50"
-                  >
-                    Selengkapnya
-                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M10.293 15.707a1 1 0 010-1.414L13.586 11H4a1 1 0 110-2h9.586l-3.293-3.293a1 1 0 111.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z" />
-                    </svg>
-                  </Link>
-                </div>
+                  {/* Kotak tentang saya */}
+                  <div className="max-w-6xl mx-auto py-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+                    {/* <!-- Kartu 1 --> */}
+                    <div className="bg-white border border-primary-50 hover:border-primary-700 rounded-xl p-6 shadow-sm">
+                      <div className="flex items-center gap-3 mb-4">
+                        {/* <!-- Ikon --> */}
+                        <img src={imgUp} alt="" className="w-6" />
+                        <h3 className="text-lg font-semibold text-gray-800">
+                          Rekam Jejak
+                        </h3>
+                      </div>
+                      <p className="text-gray-600 mb-6">
+                        Kisah Mohammad Iqbal untuk kemajuan FIA UB
+                      </p>
+                      <Link
+                        to="/Tentang Saya/Rekam Jejak"
+                        className="inline-flex items-center gap-1 px-4 py-2 text-sm font-medium text-gray-700 transition border rounded-md border-primary-50 hover:bg-primary-700 hover:text-primary-50"
+                      >
+                        Selengkapnya
+                        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                          <path d="M10.293 15.707a1 1 0 010-1.414L13.586 11H4a1 1 0 110-2h9.586l-3.293-3.293a1 1 0 111.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z" />
+                        </svg>
+                      </Link>
+                    </div>
 
-                {/* <!-- Kartu 2 (Aktif) --> */}
-                <div class="bg-white border border-primary-50 hover:border-primary-700 rounded-xl p-6 shadow-sm">
-                  <div class="flex items-center gap-3 mb-4">
-                    {/* <!-- Ikon --> */}
-                    <img src={imgBook} alt="" className="w-6" />
-                    <h3 class="text-lg font-semibold text-gray-800">
-                      Pendidikan
-                    </h3>
-                  </div>
-                  <p class="text-gray-600 mb-6">
-                    Perjalanan singkat dari Mohammad Iqbal
-                  </p>
-                  <Link
-                    to="/Tentang Saya/Pendidikan"
-                    className="inline-flex items-center gap-1 px-4 py-2 text-sm font-medium text-gray-700 transition border rounded-md border-primary-50 hover:bg-primary-700 hover:text-primary-50"
-                  >
-                    Selengkapnya
-                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M10.293 15.707a1 1 0 010-1.414L13.586 11H4a1 1 0 110-2h9.586l-3.293-3.293a1 1 0 111.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z" />
-                    </svg>
-                  </Link>
-                </div>
+                    {/* <!-- Kartu 2 (Aktif) --> */}
+                    <div className="bg-white border border-primary-50 hover:border-primary-700 rounded-xl p-6 shadow-sm">
+                      <div className="flex items-center gap-3 mb-4">
+                        {/* <!-- Ikon --> */}
+                        <img src={imgBook} alt="" className="w-6" />
+                        <h3 className="text-lg font-semibold text-gray-800">
+                          Pendidikan
+                        </h3>
+                      </div>
+                      <p className="text-gray-600 mb-6">
+                        Perjalanan singkat dari Mohammad Iqbal
+                      </p>
+                      <Link
+                        to="/Tentang Saya/Pendidikan"
+                        className="inline-flex items-center gap-1 px-4 py-2 text-sm font-medium text-gray-700 transition border rounded-md border-primary-50 hover:bg-primary-700 hover:text-primary-50"
+                      >
+                        Selengkapnya
+                        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                          <path d="M10.293 15.707a1 1 0 010-1.414L13.586 11H4a1 1 0 110-2h9.586l-3.293-3.293a1 1 0 111.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z" />
+                        </svg>
+                      </Link>
+                    </div>
 
-                {/* <!-- Kartu 3 --> */}
-                <div class="bg-white border border-primary-50 hover:border-primary-700 rounded-xl p-6 shadow-sm">
-                  <div class="flex items-center gap-3 mb-4">
-                    {/* <!-- Ikon --> */}
-                    <img src={imgEye} alt="" className="w-6" />
-                    <h3 class="text-lg font-semibold text-gray-800">
-                      Visi & Misi
-                    </h3>
+                    {/* <!-- Kartu 3 --> */}
+                    <div className="bg-white border border-primary-50 hover:border-primary-700 rounded-xl p-6 shadow-sm">
+                      <div className="flex items-center gap-3 mb-4">
+                        {/* <!-- Ikon --> */}
+                        <img src={imgEye} alt="" className="w-6" />
+                        <h3 className="text-lg font-semibold text-gray-800">
+                          Visi & Misi
+                        </h3>
+                      </div>
+                      <p className="text-gray-600 mb-6">
+                        Perjalanan singkat dari Mohammad Iqbal
+                      </p>
+                      <Link
+                        to="/Tentang Saya/Visi Misi"
+                        className="inline-flex items-center gap-1 px-4 py-2 text-sm font-medium text-gray-700 transition border rounded-md border-primary-50 hover:bg-primary-700 hover:text-primary-50"
+                      >
+                        Selengkapnya
+                        <svg
+                          className="w-4 h-4"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path d="M10.293 15.707a1 1 0 010-1.414L13.586 11H4a1 1 0 110-2h9.586l-3.293-3.293a1 1 0 111.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z" />
+                        </svg>
+                      </Link>
+                    </div>
                   </div>
-                  <p class="text-gray-600 mb-6">
-                    Perjalanan singkat dari Mohammad Iqbal
-                  </p>
-                  <Link
-                    to="/Tentang Saya/Visi Misi"
-                    className="inline-flex items-center gap-1 px-4 py-2 text-sm font-medium text-gray-700 transition border rounded-md border-primary-50 hover:bg-primary-700 hover:text-primary-50"
-                  >
-                    Selengkapnya
-                    <svg
-                      className="w-4 h-4"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M10.293 15.707a1 1 0 010-1.414L13.586 11H4a1 1 0 110-2h9.586l-3.293-3.293a1 1 0 111.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z" />
-                    </svg>
-                  </Link>
                 </div>
               </div>
             </div>
@@ -195,14 +219,14 @@ export default function Test() {
       </section>
 
       <section id="programkerja" class="my-20">
-        <div className="container">
+        <div className="">
           <div class="text-center mb-12">
             <div class="mx-auto my-10 w-15 h-2 bg-primary-500 rounded"></div>
-            <h2 class="text-5xl font-bold text-gray-900">
+            <h2 class="xl:text-5xl md:text-4xl text-4xl font-bold text-gray-900">
               Program Kerja Nyata,{" "}
               <span class="text-primary">FIA UB Juara!</span>
             </h2>
-            <p class="text-gray-600 mt-4 max-w-xl mx-auto">
+            <p class="text-gray-600 mt-4 max-w-xl mx-auto xl:text-base md:text-base text-base">
               Mewujudkan FIA UB yang unggul melalui inovasi, kolaborasi, dan
               kepemimpinan berintegritas.
             </p>
@@ -315,8 +339,8 @@ export default function Test() {
         </div>
       </section>
 
-      <section id="dukungan" class="my-20 ">
-        <div className="container">
+      <section id="dukungan" class="my-20">
+        <div className="w-full">
           <div class="bg-[url('/public/UB.png')] bg-cover bg-center py-30 px-14">
             <div class=" mx-auto text-white">
               {/* <!-- Judul --> */}
@@ -324,7 +348,7 @@ export default function Test() {
                 <div class="flex items-center gap-2 text-2xl font-bold">
                   {/* <!-- Icon Speaker --> */}
                   <img src={imgMegaphone} alt="" />
-                  <h2 className="ml-2 text-5xl">Suarakan Dukunganmu!</h2>
+                  <h2 className="ml-2 xl:text-5xl md:text-2xl text-2xl">Suarakan Dukunganmu!</h2>
                 </div>
               </div>
 
@@ -397,7 +421,7 @@ export default function Test() {
       </section>
 
       <section id="kontak" class="my-20">
-        <div className="container">
+        <div className="w-full px-10">
           <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
             {/* <!-- Kiri: Informasi --> */}
             <div>
