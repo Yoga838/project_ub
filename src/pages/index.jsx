@@ -12,6 +12,7 @@ import imgMegaphone from "../assets/icons/megaphone.svg";
 import imgAmplop from "../assets/icons/amplop.svg";
 import imgPhone from "../assets/icons/telephone.svg";
 import imgInstagram from "../assets/icons/instagram.svg";
+import { Link } from 'react-router-dom';
 
 export default function Test() {
   return (
@@ -21,7 +22,7 @@ export default function Test() {
         <div class="container bg-[url('/public/TopSection.png')] bg-cover bg-center h-full w-full">
           <div className="grid grid-cols-12">
             {/* texs kiri */}
-            <div className="col-span-6 flex justify-center items-center">
+            <div className="flex items-center justify-center col-span-6">
               <div>
                 <h1 class="text-3xl md:text-4xl font-bold text-gray-800 leading-snug">
                   MEMBAWA{" "}
@@ -92,21 +93,21 @@ export default function Test() {
                 class="w-[70%] object-cover mx-auto"
               />
             </div>
-            <div className="col-span-7 justify-center items-center -ml-10">
+            <div className="items-center justify-center col-span-7 -ml-10">
               <h1 className="text-4xl font-bold">
                 Lebih Dekat dengan Mohammad Iqbal.
               </h1>
-              <h2 className="text-2xl pt-2 font-semibold">
+              <h2 className="pt-2 text-2xl font-semibold">
                 Visi, Kolaborasi, Inovasi untuk FIA UB Maju
               </h2>
-              <p className="text-lg text-justify pt-15 pr-20">
+              <p className="pr-20 text-lg text-justify pt-15">
                 Mohammad Iqbal adalah sosok pemimpin visioner yang memiliki
                 komitmen kuat dalam membawa perubahan positif. Dengan pengalaman
                 dan dedikasinya di dunia akademik serta manajerial, ia terus
                 berupaya menciptakan inovasi dalam sistem pendidikan, tata
                 kelola, dan pengembangan sumber daya manusia.
               </p>
-              <p className="text-lg text-justify pt-5 pr-20">
+              <p className="pt-5 pr-20 text-lg text-justify">
                 Sebagai individu yang percaya pada kekuatan visi, kolaborasi,
                 dan inovasi, Mohammad Iqbal bertekad untuk menjadikan FIA UB
                 sebagai institusi yang unggul, adaptif, dan berdaya
@@ -127,19 +128,15 @@ export default function Test() {
                   <p class="text-gray-600 mb-6">
                     Kisah Mohammad Iqbal untuk kemajuan FIA UB
                   </p>
-                  <a
-                    href="#"
-                    class="inline-flex items-center gap-1 text-sm font-medium px-4 py-2 border border-primary-50 rounded-md text-gray-700 hover:bg-primary-700 hover:text-primary-50 transition"
+                  <Link
+                    to="/Tentang Saya/Rekam Jejak"
+                    className="inline-flex items-center gap-1 px-4 py-2 text-sm font-medium text-gray-700 transition border rounded-md border-primary-50 hover:bg-primary-700 hover:text-primary-50"
                   >
                     Selengkapnya
-                    <svg
-                      class="w-4 h-4"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
+                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M10.293 15.707a1 1 0 010-1.414L13.586 11H4a1 1 0 110-2h9.586l-3.293-3.293a1 1 0 111.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z" />
                     </svg>
-                  </a>
+                  </Link>
                 </div>
 
                 {/* <!-- Kartu 2 (Aktif) --> */}
@@ -154,19 +151,15 @@ export default function Test() {
                   <p class="text-gray-600 mb-6">
                     Perjalanan singkat dari Mohammad Iqbal
                   </p>
-                  <a
-                    href="#"
-                    class="inline-flex items-center gap-1 text-sm font-medium px-4 py-2 border border-primary-50 rounded-md text-gray-700 hover:bg-primary-700 hover:text-primary-50 transition"
+                  <Link
+                    to="/Tentang Saya/Pendidikan"
+                    className="inline-flex items-center gap-1 px-4 py-2 text-sm font-medium text-gray-700 transition border rounded-md border-primary-50 hover:bg-primary-700 hover:text-primary-50"
                   >
                     Selengkapnya
-                    <svg
-                      class="w-4 h-4"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
+                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M10.293 15.707a1 1 0 010-1.414L13.586 11H4a1 1 0 110-2h9.586l-3.293-3.293a1 1 0 111.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z" />
                     </svg>
-                  </a>
+                  </Link>
                 </div>
 
                 {/* <!-- Kartu 3 --> */}
@@ -181,19 +174,19 @@ export default function Test() {
                   <p class="text-gray-600 mb-6">
                     Perjalanan singkat dari Mohammad Iqbal
                   </p>
-                  <a
-                    href="#"
-                    class="inline-flex items-center gap-1 text-sm font-medium px-4 py-2 border border-primary-50 rounded-md text-gray-700 hover:bg-primary-700 hover:text-primary-50 transition"
+                  <Link
+                    to="/Tentang Saya/Visi Misi"
+                    className="inline-flex items-center gap-1 px-4 py-2 text-sm font-medium text-gray-700 transition border rounded-md border-primary-50 hover:bg-primary-700 hover:text-primary-50"
                   >
                     Selengkapnya
                     <svg
-                      class="w-4 h-4"
+                      className="w-4 h-4"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
                       <path d="M10.293 15.707a1 1 0 010-1.414L13.586 11H4a1 1 0 110-2h9.586l-3.293-3.293a1 1 0 111.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z" />
                     </svg>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -229,25 +222,25 @@ export default function Test() {
                 Menyusun kurikulum berbasis outcome-based education (OBE) dan
                 Merdeka Belajar Kampus Merdeka (MBKM).
               </p>
-              <a
-                href="#"
-                class="text-sm font-medium text-primary hover:underline flex items-center gap-1"
+              <Link
+                to="/digitalisasi"
+                className="flex items-center gap-1 text-sm font-medium text-primary hover:underline"
               >
                 Selengkapnya
                 <svg
-                  class="w-4 h-4"
+                  className="w-4 h-4"
                   fill="none"
                   stroke="currentColor"
-                  stroke-width="2"
+                  strokeWidth="2"
                   viewBox="0 0 24 24"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     d="M9 5l7 7-7 7"
                   />
                 </svg>
-              </a>
+              </Link>
             </div>
 
             {/* <!-- Card 2 - aktif --> */}
@@ -264,25 +257,25 @@ export default function Test() {
                 Merdeka Belajar Kampus Merdeka (MBKM). Menyusun kurikulum
                 berbasis outcome-based.
               </p>
-              <a
-                href="#"
-                class="text-sm font-medium hover:underline flex items-center gap-1"
+              <Link
+                to="/internasionalisasi"
+                className="flex items-center gap-1 text-sm font-medium text-primary hover:underline"
               >
                 Selengkapnya
                 <svg
-                  class="w-4 h-4"
+                  className="w-4 h-4"
                   fill="none"
                   stroke="currentColor"
-                  stroke-width="2"
+                  strokeWidth="2"
                   viewBox="0 0 24 24"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     d="M9 5l7 7-7 7"
                   />
                 </svg>
-              </a>
+              </Link>
             </div>
 
             {/* <!-- Card 3 --> */}
@@ -298,25 +291,25 @@ export default function Test() {
                 Menyusun kurikulum berbasis outcome-based education (OBE) dan
                 Merdeka Belajar Kampus Merdeka (MBKM).
               </p>
-              <a
-                href="#"
-                class="text-sm font-medium text-primary hover:underline flex items-center gap-1"
+              <Link
+                to="/penguatan"
+                className="flex items-center gap-1 text-sm font-medium text-primary hover:underline"
               >
                 Selengkapnya
                 <svg
-                  class="w-4 h-4"
+                  className="w-4 h-4"
                   fill="none"
                   stroke="currentColor"
-                  stroke-width="2"
+                  strokeWidth="2"
                   viewBox="0 0 24 24"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     d="M9 5l7 7-7 7"
                   />
                 </svg>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -331,7 +324,7 @@ export default function Test() {
                 <div class="flex items-center gap-2 text-2xl font-bold">
                   {/* <!-- Icon Speaker --> */}
                   <img src={imgMegaphone} alt="" />
-                  <h2 className="text-5xl ml-2">Suarakan Dukunganmu!</h2>
+                  <h2 className="ml-2 text-5xl">Suarakan Dukunganmu!</h2>
                 </div>
               </div>
 
