@@ -23,24 +23,32 @@ const Navbar = () => {
           }`}
         >
           <li>
-            <span className="block py-2 text-black cursor-pointer hover:text-blue-600">
-              Tentang Saya
-            </span>
+            <a href="#about">
+              <span className="block py-2 text-black cursor-pointer hover:text-blue-600">
+                Tentang Saya
+              </span>
+            </a>
           </li>
           <li>
-            <span className="block py-2 text-black cursor-pointer hover:text-blue-600">
-              Program Kerja
-            </span>
+            <a href="#programkerja">
+              <span className="block py-2 text-black cursor-pointer hover:text-blue-600">
+                Program Kerja
+              </span>
+            </a>
           </li>
           <li>
-            <span className="block py-2 text-black cursor-pointer hover:text-blue-600">
-              Dukungan
-            </span>
+            <a href="#dukungan">
+              <span className="block py-2 text-black cursor-pointer hover:text-blue-600">
+                Dukungan
+              </span>
+            </a>
           </li>
           <li>
-            <span className="block py-2 text-black cursor-pointer hover:text-blue-600">
-              Kontak
-            </span>
+            <a href="#kontak">
+              <span className="block py-2 text-black cursor-pointer hover:text-blue-600">
+                Kontak
+              </span>
+            </a>
           </li>
         </ul>
       </div>

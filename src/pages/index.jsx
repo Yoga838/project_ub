@@ -18,7 +18,7 @@ export default function Test() {
   return (
     <>
       <Navbar />
-      <section id="Hero" class="pt-24">
+      <section id="hero" class="pt-24">
         <div class="container bg-[url('/public/TopSection.png')] bg-cover bg-center h-full w-full">
           <div className="grid grid-cols-12">
             {/* texs kiri */}
@@ -82,7 +82,7 @@ export default function Test() {
         </div>
       </section>
 
-      <section id="About" class="my-20">
+      <section id="about" class="my-20">
         <div class="container">
           <div className="grid grid-cols-12">
             {/* foto kiri */}
@@ -194,7 +194,7 @@ export default function Test() {
         </div>
       </section>
 
-      <section id="ProgramKerja" class="my-20">
+      <section id="programkerja" class="my-20">
         <div className="container">
           <div class="text-center mb-12">
             <div class="mx-auto my-10 w-15 h-2 bg-primary-500 rounded"></div>
@@ -315,7 +315,7 @@ export default function Test() {
         </div>
       </section>
 
-      <section id="Dukungan" class="my-20 ">
+      <section id="dukungan" class="my-20 ">
         <div className="container">
           <div class="bg-[url('/public/UB.png')] bg-cover bg-center py-30 px-14">
             <div class=" mx-auto text-white">
@@ -396,7 +396,7 @@ export default function Test() {
         </div>
       </section>
 
-      <section id="Kontak" class="my-20">
+      <section id="kontak" class="my-20">
         <div className="container">
           <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
             {/* <!-- Kiri: Informasi --> */}
@@ -456,7 +456,6 @@ export default function Test() {
           </div>
         </div>
       </section>
-
       <Footer />
     </>
   );
