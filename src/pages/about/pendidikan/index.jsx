@@ -133,20 +133,24 @@ export default function Pendidikan() {
             pusat keunggulan yang mampu menjawab tantangan zaman.”
           </p>
           <div className="space-y-2 text-sm text-gray-700">
-            <p className="flex items-center gap-2">
-              <Mail className="w-4 h-4 text-primary-700" />
-              <a href="mailto:iqbal.eee@gmail.com" className="hover:underline">
-                iqbal.eee@gmail.com
-              </a>
-            </p>
-            <p className="flex items-center gap-2">
-              <Phone className="w-4 h-4 text-primary-700" />
-              62 121-313-456
-            </p>
-            <p className="flex items-center gap-2">
-              <Instagram className="w-4 h-4 text-primary-700" />
-              @iqbal.e
-            </p>
+            <div className="flex gap-5">
+              <div>
+                <Mail className="text-gray-800" />
+              </div>
+              <p className="text-gray-800">Iqbal.ee@gmail.com</p>
+            </div>
+            <div className="flex gap-5 my-2.5">
+              <div>
+                <Phone className="text-gray-800" />
+              </div>
+              <p className="text-gray-800">62 121-313-456</p>
+            </div>
+            <div className="flex gap-5">
+              <div>
+                <Instagram className="text-gray-800" />
+              </div>
+              <p className="text-gray-800">@iqbaal.e</p>
+            </div>
           </div>
         </div>
       </div>
