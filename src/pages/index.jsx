@@ -56,12 +56,16 @@ export default function Test() {
                     </p>
                   </div>
                   <div className="mt-6 flex flex-col md:flex-row gap-4 md:justify-start justify-center">
-                    <button className="bg-gray-900 text-white px-6 py-2 rounded-lg font-medium hover:bg-gray-800 transition">
-                      Program Kerja
-                    </button>
-                    <button className="border border-gray-400 text-gray-700 px-6 py-2 rounded-lg font-medium hover:bg-gray-100 transition">
-                      Kontak
-                    </button>
+                    <a href="#programkerja">
+                      <button className="bg-gray-900 text-white px-6 py-2 rounded-lg font-medium hover:bg-gray-800 transition">
+                        Program Kerja
+                      </button>
+                    </a>
+                    <a href="#kontak">
+                      <button className="border border-gray-400 text-gray-700 px-6 py-2 rounded-lg font-medium hover:bg-gray-100 transition">
+                        Kontak
+                      </button>
+                    </a>
                   </div>
                 </div>
               </div>

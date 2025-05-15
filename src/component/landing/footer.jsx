@@ -16,7 +16,7 @@ const Footer = () => {
         >
           <path d="M22.672 15.226...z" />
         </svg>
-        <p>Copyright © {new Date().getFullYear()} - All rights reserved</p>
+        <p>{new Date().getFullYear()} © Mohammad Iqbal | All rights reserved</p>
       </aside>
 
       {/* Menu navigasi */}

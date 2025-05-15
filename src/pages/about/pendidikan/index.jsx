@@ -33,7 +33,7 @@ export default function Pendidikan() {
             penelitian serta kontribusi akademik yang berdampak luas bagi
             masyarakat dan pemerintah.
           </p>
-          <button className="border-white border-2 text-white px-6 sm:px-10 py-2 rounded-2xl font-semibold shadow">
+          <button className="w-[200px] px-6 py-2 text-white bg-transparent rounded-[15px] border border-white hover:bg-white hover:text-black transition">
             Kontak
           </button>
         </div>
