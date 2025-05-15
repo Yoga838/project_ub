@@ -8,6 +8,8 @@ import Ketpen from "./pages/about/rekamJejak/ketpen/index";
 import Dashboard from "./pages/dashboard";
 import PagesHome from "./pages/dashboard/pagesHome";
 import PagesWork from "./pages/dashboard/pagesWork";
+import Pendidikan from "./pages/about/pendidikan";
+import VisiMisi from "./pages/about/visiMisi";
 
 function App() {
   return (
@@ -23,6 +25,9 @@ function App() {
         <Route path="/Tentang Saya/Rekam Jejak/Ketpen" element={<Ketpen />} />
 
         {/* Rute Dashboard dengan rute anak */}
+        <Route path="/Tentang Saya/Pendidikan" element={<Pendidikan />} />
+        <Route path="/Tentang Saya/Visi Misi" element={<VisiMisi />} />
+          
         <Route path="/dashboard" element={<Dashboard />}>
           <Route index element={<PagesHome />} />
           <Route path="programkerja" element={<PagesWork />} />
