@@ -15,6 +15,7 @@ import Pendidikan from "./pages/about/pendidikan";
 import VisiMisi from "./pages/about/visiMisi";
 import Add from "./pages/dashboard/pagesWork/add";
 import Page_1 from "./pages/dashboard/pagesWork/add/page_1";
+import PagesSetting from "./pages/dashboard/pagesSetting";
 
 function App() {
   return (
@@ -42,7 +43,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />}>
           <Route index element={<PagesHome />} />
           <Route path="programkerja" element={<PagesWork />} />
-          <Route path="Pengaturan" element={<PagesWork />} />
+          <Route path="Pengaturan" element={<PagesSetting />} />
           <Route path="Add Program Kerja" element={<Add />}>
             <Route index element={<Page_1 />} />
           </Route>
