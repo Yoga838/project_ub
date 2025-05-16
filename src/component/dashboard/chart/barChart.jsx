@@ -8,9 +8,9 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
-
 import { Bar } from "react-chartjs-2";
 
+// Registrasi elemen ChartJS
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -20,17 +20,20 @@ ChartJS.register(
   Legend
 );
 
+// Opsi konfigurasi chart
 const options = {
   responsive: true,
+  maintainAspectRatio: false, // Kunci agar tinggi bisa menyesuaikan
   plugins: {
-    legend: { position: "top" }, // "chartArea" is invalid
+    legend: { position: "top" },
     title: {
       display: true,
-      //   text: "Modular Bar Chart",
+      text: "Grafik Dukungan Bulanan",
     },
   },
 };
 
+// Data chart
 const data = {
   labels: [
     "Jan",
@@ -55,9 +58,10 @@ const data = {
   ],
 };
 
+// Komponen BarChart
 export default function BarChart() {
   return (
-    <div className="w-full max-w-3xl mx-auto p-4">
+    <div className="w-full h-[300px] md:h-[400px] lg:h-[450px]">
       <Bar options={options} data={data} />
     </div>
   );
