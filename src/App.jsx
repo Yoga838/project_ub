@@ -22,22 +22,29 @@ function App() {
       <Routes>
         {/* Rute utama */}
         <Route path="/" element={<Test />} />
-        
+
         {/* Rute Rekam Jejak */}
         <Route path="/Tentang Saya/Rekam Jejak" element={<RekamJejak />} />
-        <Route path="/Tentang Saya/Rekam Jejak/Publikasi" element={<Publikasi />} />
-        <Route path="/Tentang Saya/Rekam Jejak/Pemateri" element={<Pemateri />} />
+        <Route
+          path="/Tentang Saya/Rekam Jejak/Publikasi"
+          element={<Publikasi />}
+        />
+        <Route
+          path="/Tentang Saya/Rekam Jejak/Pemateri"
+          element={<Pemateri />}
+        />
         <Route path="/Tentang Saya/Rekam Jejak/Ketpen" element={<Ketpen />} />
 
         {/* Rute Dashboard dengan rute anak */}
         <Route path="/Tentang Saya/Pendidikan" element={<Pendidikan />} />
         <Route path="/Tentang Saya/Visi Misi" element={<VisiMisi />} />
-          
+
         <Route path="/dashboard" element={<Dashboard />}>
           <Route index element={<PagesHome />} />
           <Route path="programkerja" element={<PagesWork />} />
+          <Route path="Pengaturan" element={<PagesWork />} />
           <Route path="Add Program Kerja" element={<Add />}>
-            <Route index element={<Page_1 />}/>
+            <Route index element={<Page_1 />} />
           </Route>
         </Route>
         <Route path="/digitalisasi" element={<Digitalisasi />} />
