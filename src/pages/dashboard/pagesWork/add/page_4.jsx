@@ -37,10 +37,10 @@ export default function Page_3() {
             </div>
             <div className='text-center mt-14'>
                 <Link to="/dashboard/Add Program Kerja/Page 3">
-                    <button className='w-[389px] h-[50px] me-2.5 rounded-lg border border-primary-700 text-primary-700 text-sm font-medium hover:bg-gray-700 hover:text-white transition'>Kembali</button>
+                    <button className='xl:w-[389px] xl:h-[50px] md:w-full md:h-[50px] w-full h-[50px] me-2.5 rounded-lg border border-primary-700 text-primary-700 text-sm font-medium hover:bg-gray-700 hover:text-white transition'>Kembali</button>
                 </Link>
                 <Link to="/dashboard/programkerja">
-                    <button className='w-[389px] h-[50px] rounded-lg bg-gray-700 text-white text-sm font-medium hover:bg-gray-800 transition'>Simpan</button>
+                    <button className='xl:w-[389px] xl:h-[50px] md:w-full md:h-[50px] w-full h-[50px] xl:mt-0 md:mt-5 mt-5 rounded-lg bg-gray-700 text-white text-sm font-medium hover:bg-gray-800 transition'>Simpan</button>
                 </Link>
             </div>
         </div>

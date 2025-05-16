@@ -31,7 +31,7 @@ export default function PagesWork() {
         </div>
       </div>
       <div className="my-8">
-        <div className="">
+        <div className="overflow-x-auto w-full">
           <table className=" min-w-full rounded-xl">
               <thead>
                   <tr className="bg-primary-600">

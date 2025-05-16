@@ -28,7 +28,7 @@ export default function Page_1() {
             </div>
             <Link to="/dashboard/Add Program Kerja/Page 2">
                 <div className='text-center'>
-                    <button className='w-[778px] h-[50px] rounded-lg bg-gray-700 text-white text-sm font-medium hover:bg-gray-800 transition'>Lanjut</button>
+                    <button className='xl:w-[778px] xl:h-[50px] md:w-full md:h-[50px] w-full h-[50px] rounded-lg bg-gray-700 text-white text-sm font-medium hover:bg-gray-800 transition'>Lanjut</button>
                 </div>
             </Link>
         </div>
