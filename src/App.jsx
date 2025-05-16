@@ -13,6 +13,8 @@ import Internasionalisasi from "./pages/programkerja/internasionalisasi";
 import Penguatan from "./pages/programkerja/penguatan";
 import Pendidikan from "./pages/about/pendidikan";
 import VisiMisi from "./pages/about/visiMisi";
+import Add from "./pages/dashboard/pagesWork/add";
+import Page_1 from "./pages/dashboard/pagesWork/add/page_1";
 
 function App() {
   return (
@@ -34,6 +36,9 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />}>
           <Route index element={<PagesHome />} />
           <Route path="programkerja" element={<PagesWork />} />
+          <Route path="Add Program Kerja" element={<Add />}>
+            <Route index element={<Page_1 />}/>
+          </Route>
         </Route>
         <Route path="/digitalisasi" element={<Digitalisasi />} />
         <Route path="/internasionalisasi" element={<Internasionalisasi />} />

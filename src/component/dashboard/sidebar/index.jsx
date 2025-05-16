@@ -10,6 +10,7 @@ import {
   Menu,
   X,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -47,8 +48,12 @@ export default function Sidebar() {
 
             {/* Menu Items */}
             <nav className="w-full space-y-4">
-              <SidebarItem icon={<Home size={18} />} label="Dashboard" active />
-              <SidebarItem icon={<Monitor size={18} />} label="Program Kerja" />
+              <Link to="/dashboard">
+                <SidebarItem icon={<Home size={18} />} label="Dashboard" active />
+              </Link>
+              <Link to="/dashboard/programkerja">
+                <SidebarItem icon={<Monitor size={18} />} label="Program Kerja" />
+              </Link>
               <SidebarItem icon={<Megaphone size={18} />} label="Dukungan" />
               <SidebarItem icon={<User size={18} />} label="Tentang Saya" />
               <SidebarItem icon={<Settings size={18} />} label="Pengaturan" />
