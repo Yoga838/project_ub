@@ -21,7 +21,7 @@ export default function FormDesc({
         value={value}
         onChange={onChange}
         placeholder={placeholder}
-        className="w-[900px] text-sm px-6 py-4 border-grey-4 border-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="w-full text-sm px-6 py-4 border-grey-4 border-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
       />
     </div>
   );

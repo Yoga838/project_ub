@@ -5,12 +5,12 @@ import { Link } from "react-router-dom";
 export default function PagesWork() {
   return (
     <div className="mx-10 my-15">
-      <div className="flex justify-between items-center">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
         <div>
           <h1 className="text-gray-800 font-medium text-2xl">Program Kerja</h1>
           <p className="text-gray-800/50 text-lg">Lorem ipsum dolor sit amet, consectetur.</p>
         </div>
-        <div className="flex justify-between items-center">
+        <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
           <div className="relative w-full max-w-md">
             <span className="absolute inset-y-0 left-3 flex items-center text-gray-400">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -24,7 +24,7 @@ export default function PagesWork() {
             />
           </div>
             <Link to="/dashboard/Add Program Kerja">
-              <button className="w-[150px] h-[50px] ml-4 px-6 py-2 rounded-lg bg-gray-800 text-white text-sm font-medium hover:bg-gray-700 transition">
+              <button className="w-[150px] h-[50px] px-6 py-2 rounded-lg bg-gray-700 text-white text-sm font-medium hover:bg-gray-800 transition">
                 Tambah Data
               </button>
             </Link>
