@@ -49,12 +49,21 @@ export default function Sidebar() {
             {/* Menu Items */}
             <nav className="w-full space-y-4">
               <Link to="/dashboard">
-                <SidebarItem icon={<Home size={18} />} label="Dashboard" active />
+                <SidebarItem
+                  icon={<Home size={18} />}
+                  label="Dashboard"
+                  active
+                />
               </Link>
               <Link to="/dashboard/programkerja">
-                <SidebarItem icon={<Monitor size={18} />} label="Program Kerja" />
+                <SidebarItem
+                  icon={<Monitor size={18} />}
+                  label="Program Kerja"
+                />
               </Link>
-              <SidebarItem icon={<Megaphone size={18} />} label="Dukungan" />
+              <Link to="/dashboard/dukungan">
+                <SidebarItem icon={<Megaphone size={18} />} label="Dukungan" />
+              </Link>
               <SidebarItem icon={<User size={18} />} label="Tentang Saya" />
               <SidebarItem icon={<Settings size={18} />} label="Pengaturan" />
             </nav>

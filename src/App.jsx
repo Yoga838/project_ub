@@ -19,6 +19,7 @@ import PagesSetting from "./pages/dashboard/pagesSetting";
 import Page_2 from "./pages/dashboard/pagesWork/add/page_2";
 import Page_3 from "./pages/dashboard/pagesWork/add/page_3";
 import Page_4 from "./pages/dashboard/pagesWork/add/page_4";
+import PagesDukungan from "./pages/dashboard/pagesDukungan";
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />}>
           <Route index element={<PagesHome />} />
           <Route path="programkerja" element={<PagesWork />} />
+          <Route path="dukungan" element={<PagesDukungan />} />
           <Route path="Pengaturan" element={<PagesSetting />} />
           <Route path="Add Program Kerja" element={<Add />}>
             <Route index element={<Page_1 />} />
