@@ -56,7 +56,9 @@ export default function Sidebar() {
               </Link>
               <SidebarItem icon={<Megaphone size={18} />} label="Dukungan" />
               <SidebarItem icon={<User size={18} />} label="Tentang Saya" />
-              <SidebarItem icon={<Settings size={18} />} label="Pengaturan" />
+              <Link to = "/dashboard/pengaturan">
+                <SidebarItem icon={<Settings size={18} />} label="Pengaturan" />
+              </Link>
             </nav>
           </div>
 

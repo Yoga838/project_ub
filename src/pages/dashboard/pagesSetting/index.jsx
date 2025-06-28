@@ -1,81 +1,79 @@
 import React, { useState } from "react";
-import { User, Phone, Link2 } from "lucide-react";
 import profiling from "../../../assets/profiling.png";
+import FormInput from "../../../component/dashboard/formInput/formInput";
 
 export default function PagesSetting() {
-  const [activeMenu, setActiveMenu] = useState("akun");
-
-  const menuItems = [
-    { key: "akun", icon: <User size={20} />, label: "Pengaturan Akun" },
-    { key: "sosial", icon: <Link2 size={20} />, label: "Sosial Media" },
-    { key: "kontak", icon: <Phone size={20} />, label: "Kontak" },
-  ];
+  const [namaProfil, setNamaProfil] = useState("");
+  const [email, setEmail] = useState("");
+  const [instagram, setInstagram] = useState("");
+  const [whatsapp, setWhatsapp] = useState("");
 
   return (
-    <div className="ml-4 px-4">
-      {/* Name Pengaturan */}
-      <h1 className="mt-10 font-semibold text-xl text-primary-500">
-        Pengaturan
-      </h1>
-      <div className="flex">
-        <div className="">
-          <div className="bg-primary-500 rounded-lg px-9 py-5 mt-5 w-max">
-            {menuItems.map((item) => {
-              const isActive = activeMenu === item.key;
-              return (
-                <div
-                  key={item.key}
-                  className={`flex items-center gap-4 ${
-                    isActive
-                      ? "bg-white/20 pl-4 pr-14 py-4 rounded-lg"
-                      : "pl-4 pr-14 py-4"
-                  } cursor-pointer text-white`}
-                  onClick={() => setActiveMenu(item.key)}
-                >
-                  <div className="icon flex items-center">{item.icon}</div>
-                  <div className="flex items-center">
-                    <h1 className="text-sm">{item.label}</h1>
-                  </div>
-                </div>
-              );
-            })}
+    <div className="mx-10 my-10">
+      <div className="my-10">
+        <div className="bg-white  py-4 px-5 rounded-2xl">
+          <h1 className="font-semibold text-2xl">Profil</h1>
+          <div className="flex gap-5 mt-5">
+            <div>
+              <img
+                src={profiling}
+                alt="Profile"
+                className="w-16 h-16 rounded-full border-2 border-grey-2 object-cover mb-3"
+              />
+            </div>
+            <div className="mx-5 px-5 pt-3">
+              <button className="bg-primary-800 px-3 py-1 text-sm text-white rounded-lg mr-3">
+                Unggah
+              </button>
+              <button className="border-grey-4 border-2 px-3 py-1 text-sm text-primary-800 rounded-lg">
+                Hapus
+              </button>
+            </div>
           </div>
-        </div>
-        <div className="mt-5 px-14">
-          {/* Name Pengaturan */}
-          <h1 className="font-medium text-xl text-dark-900">Pengaturan</h1>
-          {/* Profil */}
+
           <div className="my-5">
-            <img
-              src={profiling}
-              alt="Profile"
-              className="w-16 h-16 rounded-full border-2 border-grey-2 object-cover mb-3"
+            <FormInput
+              label="Nama Profil"
+              name="nama_profil"
+              value={namaProfil}
+              onChange={(e) => setNamaProfil(e.target.value)}
+              placeholder="Mohamad Iqbal"
             />
           </div>
-          {/* Input Name */}
-          <div className="mb-4 flex flex-col">
-            <label
-              htmlFor="name"
-              className="mb-1 text-sm font-light text-dark-900"
-            >
-              Nama
-            </label>
-            <input
-              id="name"
-              type="text"
-              name="name"
-              value=""
-              onChange={() => {}}
-              placeholder="Masukkan nama anda ..."
-              className="border border-gray-300 bg-grey-4 rounded-md p-2 w-96"
+
+          <h1 className="font-semibold pt-5 text-2xl">Sosial Media</h1>
+
+          <div className="mt-5">
+            <FormInput
+              label="Email"
+              name="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="iqbaal.e@gmail.com"
             />
           </div>
-          <div className="">
-            <button className="bg-primary-800 px-3 py-1 text-sm text-white rounded-lg mr-3">
-              Perbarui
-            </button>
-            <button className="border-grey-4 border-2 px-3 py-1 text-sm text-primary-800 rounded-lg">
-              Hapus
+          <div className="mt-5">
+            <FormInput
+              label="Instagram"
+              name="instagram"
+              value={instagram}
+              onChange={(e) => setInstagram(e.target.value)}
+              placeholder="@Iqbaal.ee"
+            />
+          </div>
+          <div className="mt-5">
+            <FormInput
+              label="Whatsapp"
+              name="whatsapp"
+              value={whatsapp}
+              onChange={(e) => setWhatsapp(e.target.value)}
+              placeholder="081123231123"
+            />
+          </div>
+          
+          <div className="button my-7 flex justify-center">
+            <button className="bg-primary-800 px-6 py-4 text-sm text-white rounded-lg mr-3">
+              Simpan
             </button>
           </div>
         </div>

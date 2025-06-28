@@ -46,7 +46,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />}>
           <Route index element={<PagesHome />} />
           <Route path="programkerja" element={<PagesWork />} />
-          <Route path="Pengaturan" element={<PagesSetting />} />
+          <Route path="pengaturan" element={<PagesSetting />} />
           <Route path="Add Program Kerja" element={<Add />}>
             <Route index element={<Page_1 />} />
             <Route path="Page 2" element={<Page_2 />} />
