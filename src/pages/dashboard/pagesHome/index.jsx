@@ -17,7 +17,7 @@ const supportData = [
 
 export default function PagesHome() {
   return (
-    <div className="ml-4 px-4">
+    <div className="m-4 px-4">
       {/* Banner */}
       <div className="relative w-full rounded-xl overflow-hidden bg-gradient-to-r from-primary-600 to-primary-500 flex flex-col md:flex-row items-center px-4 md:px-8 py-4">
         <img

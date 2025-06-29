@@ -34,7 +34,7 @@ export default function PagesTentangSaya() {
   return (
     <>
       {/* Header */}
-      <Header />
+      <Header tagName="Tentang Saya" />
 
       {/* Konten utama */}
       <div className="p-4 mx-2 my-6 bg-white shadow-md sm:p-6 lg:p-10 rounded-xl sm:mx-4 lg:mx-10">

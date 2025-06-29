@@ -1,6 +1,7 @@
 import React from "react";
 import { SquarePen, Trash2, Plus } from "lucide-react";
 import { Link } from "react-router-dom";
+import Header from "../../../component/dashboard/header";
 
 export default function PagesWork() {
   const programData = [
@@ -91,101 +92,105 @@ export default function PagesWork() {
   ];
 
   return (
-    <div className="mx-10 my-15 rounded-xl bg-white p-6 shadow-md">
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
-        <div>
-          <h1 className="text-gray-800 font-medium text-2xl">
-            Data Program Kerja
-          </h1>
-          <p className="text-gray-800/50 text-lg">
-            Lorem ipsum dolor sit amet, consectetur.
-          </p>
+    <>
+      <Header tagName="Program Kerja" />
+
+      <div className="mx-10 my-15 rounded-xl bg-white p-6 shadow-md">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
+          <div>
+            <h1 className="text-gray-800 font-medium text-2xl">
+              Data Program Kerja
+            </h1>
+            <p className="text-gray-800/50 text-lg">
+              Lorem ipsum dolor sit amet, consectetur.
+            </p>
+          </div>
+          <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
+            <Link to="/dashboard/Add Program Kerja">
+              <button className="w-[150px] h-[50px] flex items-center gap-2 px-6 py-2 rounded-lg bg-gray-700 text-white text-xs font-medium hover:bg-gray-800 transition">
+                Tambah Data <Plus size={15} />
+              </button>
+            </Link>
+          </div>
         </div>
-        <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
-          <Link to="/dashboard/Add Program Kerja">
-            <button className="w-[150px] h-[50px] flex items-center gap-2 px-6 py-2 rounded-lg bg-gray-700 text-white text-xs font-medium hover:bg-gray-800 transition">
-              Tambah Data <Plus size={15} />
-            </button>
-          </Link>
-        </div>
-      </div>
-      <div className="my-8">
-        <div className="overflow-x-auto w-full">
-          <table className=" min-w-full rounded-xl">
-            <thead className="">
-              <tr className="bg-primary-600">
-                <th
-                  scope="col"
-                  className="p-5 text-sm font-semibold text-white capitalize rounded-tl-xl"
-                >
-                  Judul
-                </th>
-                <th
-                  scope="col"
-                  className="p-5 text-sm font-semibold text-white capitalize"
-                >
-                  Deskripsi
-                </th>
-                <th
-                  scope="col"
-                  className="p-5 text-sm font-semibold text-white capitalize"
-                >
-                  Sub Program 1
-                </th>
-                <th
-                  scope="col"
-                  className="p-5 text-sm font-semibold text-white capitalize"
-                >
-                  Sub Program 2
-                </th>
-                <th
-                  scope="col"
-                  className="p-5 text-sm font-semibold text-white capitalize"
-                >
-                  Sub Program 3
-                </th>
-                <th
-                  scope="col"
-                  className="p-5 text-sm font-semibold text-white capitalize rounded-tr-xl"
-                >
-                  Aksi
-                </th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-gray-300">
-              {programData.map((program, index) => (
-                <tr key={index}>
-                  <td className="p-2 font-semibold">{program.judul}</td>
-                  <td className="p-2">{program.deskripsi}</td>
-                  {program.subPrograms.map((sub, idx) => (
-                    <td key={idx} className="p-2">
-                      <p className="font-semibold">Judul: {sub.judul}</p>
-                      {sub.rincian.map((item, i) => (
-                        <p key={i}>
-                          <span className="font-semibold">Rincian</span> {i + 1}
-                          : {item}
-                        </p>
-                      ))}
-                    </td>
-                  ))}
-                  <td>
-                    <td className="">
-                      <Link to="/dashboard/Edit Program Kerja">
-                        <button className="me-2.5 text-green-500">
-                          <SquarePen />
-                        </button>
-                      </Link>
-                      <button className="text-red-500">
-                        <Trash2 />
-                      </button>
-                    </td>
-                  </td>
+        <div className="my-8">
+          <div className="overflow-x-auto w-full">
+            <table className=" min-w-full rounded-xl">
+              <thead className="">
+                <tr className="bg-primary-600">
+                  <th
+                    scope="col"
+                    className="p-5 text-sm font-semibold text-white capitalize rounded-tl-xl"
+                  >
+                    Judul
+                  </th>
+                  <th
+                    scope="col"
+                    className="p-5 text-sm font-semibold text-white capitalize"
+                  >
+                    Deskripsi
+                  </th>
+                  <th
+                    scope="col"
+                    className="p-5 text-sm font-semibold text-white capitalize"
+                  >
+                    Sub Program 1
+                  </th>
+                  <th
+                    scope="col"
+                    className="p-5 text-sm font-semibold text-white capitalize"
+                  >
+                    Sub Program 2
+                  </th>
+                  <th
+                    scope="col"
+                    className="p-5 text-sm font-semibold text-white capitalize"
+                  >
+                    Sub Program 3
+                  </th>
+                  <th
+                    scope="col"
+                    className="p-5 text-sm font-semibold text-white capitalize rounded-tr-xl"
+                  >
+                    Aksi
+                  </th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody className="divide-y divide-gray-300">
+                {programData.map((program, index) => (
+                  <tr key={index}>
+                    <td className="p-2 font-semibold">{program.judul}</td>
+                    <td className="p-2">{program.deskripsi}</td>
+                    {program.subPrograms.map((sub, idx) => (
+                      <td key={idx} className="p-2">
+                        <p className="font-semibold">Judul: {sub.judul}</p>
+                        {sub.rincian.map((item, i) => (
+                          <p key={i}>
+                            <span className="font-semibold">Rincian</span>{" "}
+                            {i + 1}: {item}
+                          </p>
+                        ))}
+                      </td>
+                    ))}
+                    <td>
+                      <td className="">
+                        <Link to="/dashboard/Edit Program Kerja">
+                          <button className="me-2.5 text-green-500">
+                            <SquarePen />
+                          </button>
+                        </Link>
+                        <button className="text-red-500">
+                          <Trash2 />
+                        </button>
+                      </td>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
