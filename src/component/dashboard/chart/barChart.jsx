@@ -29,6 +29,11 @@ const options = {
     title: {
       display: true,
       text: "Grafik Dukungan Bulanan",
+      align: "start",
+      font: {
+        size: 16,
+        weight: "bold",
+      },
     },
   },
 };

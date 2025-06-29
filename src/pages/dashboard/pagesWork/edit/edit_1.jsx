@@ -26,7 +26,7 @@ export default function Page_1() {
               placeholder="Deskripsi"
             />
           </div>
-          <Link to="/dashboard/Add Program Kerja/Page 2">
+          <Link to="/dashboard/Edit Program Kerja/Edit 2">
             <div className="text-end">
               <button className="px-4 py-2 rounded-lg bg-gray-700 text-white text-sm font-medium hover:bg-gray-800 transition">
                 Lanjut

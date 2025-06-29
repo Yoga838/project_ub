@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 export default function Page_3() {
   const [formData, setFormData] = useState({
-    judul_sub_program_3: "",
+    judul_sub_program_2: "",
     rincian_sub_program_1: "",
     rincian_sub_program_2: "",
   });
@@ -20,15 +20,15 @@ export default function Page_3() {
         <div className="">
           <div>
             <FormInput
-              label="Judul Sub-Program 3"
-              name="judul_sub_program_3"
-              value={formData.judul_sub_program_3}
+              label="Judul Sub-Program 2"
+              name="judul_sub_program_2"
+              value={formData.judul_sub_program_2}
               onChange={handleChange}
-              placeholder="Judul Sub-Program 3"
+              placeholder="Judul Sub-Program 2"
               maxlength={20}
             />
             <p className="text-right text-sm mt-1">
-              {formData.judul_sub_program_3.length}/20 Karakter
+              {formData.judul_sub_program_2.length}/20 Karakter
             </p>
           </div>
           <div className="my-14">
@@ -58,14 +58,14 @@ export default function Page_3() {
             </p>
           </div>
           <div className="text-end mt-14">
-            <Link to="/dashboard/Add Program Kerja/Page 3">
+            <Link to="/dashboard/Edit Program Kerja/Edit 2">
               <button className="px-4 py-2 me-2.5 rounded-lg border border-primary-700 text-primary-700 text-sm font-medium hover:bg-gray-700 hover:text-white transition">
                 Kembali
               </button>
             </Link>
-            <Link to="/dashboard/programkerja">
+            <Link to="/dashboard/Edit Program Kerja/Edit 4">
               <button className="px-4 py-2 xl:mt-0 md:mt-5 mt-5 rounded-lg bg-gray-700 text-white text-sm font-medium hover:bg-gray-800 transition">
-                Simpan
+                Lanjut
               </button>
             </Link>
           </div>

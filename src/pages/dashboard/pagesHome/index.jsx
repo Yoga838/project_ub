@@ -3,6 +3,9 @@ import pattern from "../../../assets/pattern-banner-top.png";
 import illustration from "../../../assets/guy with globe.png";
 import {
   BookOpen,
+  Megaphone,
+  Laptop2,
+  Repeat,
   MoreVertical,
   ChevronDown,
   ChevronRight,
@@ -17,7 +20,7 @@ const supportData = [
 
 export default function PagesHome() {
   return (
-    <div className="ml-4 px-4">
+    <div className="m-4 px-4">
       {/* Banner */}
       <div className="relative w-full rounded-xl overflow-hidden bg-gradient-to-r from-primary-600 to-primary-500 flex flex-col md:flex-row items-center px-4 md:px-8 py-4">
         <img
@@ -55,20 +58,20 @@ export default function PagesHome() {
         {/* Card 1 */}
         <div className="w-full md:w-1/3">
           <div className="bg-white border-2 border-primary-200 rounded-lg shadow-2xl p-4 h-full flex flex-col justify-between">
-            <div className="flex items-center space-x-3">
-              <div className="bg-primary-600 p-2 rounded-full">
-                <BookOpen className="w-6 h-6 text-primary-50" />
+            <div className="flex items-center justify-between">
+              <div className="bg-green-200 p-2 rounded-full">
+                <Megaphone className="w-6 h-6 text-[#00994D]" />
               </div>
               <div>
-                <p className="text-sm text-gray-600">Rekam Jejak</p>
-                <p className="text-xs text-gray-400">Total Pengunjung</p>
+                <p className="text-sm text-right text-gray-600">
+                  Total Dukungan
+                </p>
+                {/* <p className="text-xs text-gray-400">Total Pengunjung</p> */}
               </div>
             </div>
             <div className="mt-5">
-              <p className="text-sm text-gray-600">Total Kunjungan</p>
-              <p className="text-2xl font-bold text-gray-800">1000+</p>
-            </div>
-            <div className="text-right">
+              {/* <p className="text-sm text-gray-600">Total Kunjungan</p> */}
+              <p className="text-2xl font-bold text-gray-800">121 Dukungan</p>
               <p className="text-xs text-gray-400">30 Hari Terakhir</p>
             </div>
           </div>
@@ -77,20 +80,20 @@ export default function PagesHome() {
         {/* Card 2 */}
         <div className="w-full md:w-1/3">
           <div className="bg-white border-2 border-primary-200 rounded-lg shadow-2xl p-4 h-full flex flex-col justify-between">
-            <div className="flex items-center space-x-3">
-              <div className="bg-primary-600 p-2 rounded-full">
-                <BookOpen className="w-6 h-6 text-primary-50" />
+            <div className="flex items-center justify-between">
+              <div className="bg-blue-200 p-2 rounded-full">
+                <Laptop2 className="w-6 h-6 text-[#1867A3]" />
               </div>
               <div>
-                <p className="text-sm text-gray-600">Pendidikan</p>
-                <p className="text-xs text-gray-400">Total Pengunjung</p>
+                <p className="text-sm text-gray-600">Total Program Kerja</p>
+                {/* <p className="text-xs text-gray-400">Total Pengunjung</p> */}
               </div>
             </div>
             <div className="mt-5">
-              <p className="text-sm text-gray-600">Total Kunjungan</p>
-              <p className="text-2xl font-bold text-gray-800">1000+</p>
-            </div>
-            <div className="text-right">
+              {/* <p className="text-sm text-gray-600">Total Kunjungan</p> */}
+              <p className="text-2xl font-bold text-gray-800">
+                4 Program Kerja
+              </p>
               <p className="text-xs text-gray-400">30 Hari Terakhir</p>
             </div>
           </div>
@@ -99,20 +102,18 @@ export default function PagesHome() {
         {/* Card 3 */}
         <div className="w-full md:w-1/3">
           <div className="bg-white border-2 border-primary-200 rounded-lg shadow-2xl p-4 h-full flex flex-col justify-between">
-            <div className="flex items-center space-x-3">
-              <div className="bg-primary-600 p-2 rounded-full">
-                <BookOpen className="w-6 h-6 text-primary-50" />
+            <div className="flex items-center justify-between">
+              <div className="bg-yellow-100 p-2 rounded-full">
+                <Repeat className="w-6 h-6 text-[#F5BF17]" />
               </div>
               <div>
-                <p className="text-sm text-gray-600">Visi & Misi</p>
-                <p className="text-xs text-gray-400">Total Pengunjung</p>
+                <p className="text-sm text-gray-600">Total Rekam Jejak</p>
+                {/* <p className="text-xs text-gray-400">Total Pengunjung</p> */}
               </div>
             </div>
             <div className="mt-5">
-              <p className="text-sm text-gray-600">Total Kunjungan</p>
-              <p className="text-2xl font-bold text-gray-800">1000+</p>
-            </div>
-            <div className="text-right">
+              {/* <p className="text-sm text-gray-600">Total Kunjungan</p> */}
+              <p className="text-2xl font-bold text-gray-800">12 Rekam Jejak</p>
               <p className="text-xs text-gray-400">30 Hari Terakhir</p>
             </div>
           </div>
