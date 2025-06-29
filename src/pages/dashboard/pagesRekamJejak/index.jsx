@@ -46,7 +46,7 @@ export default function PagesTentangSaya() {
               Lorem ipsum dolor sit amet, consectetur.
             </p>
           </div>
-          <Link to="/dashboard/tambah-data">
+          <Link to="/dashboard/Add Rekam Jejak">
             <button className="w-full px-4 py-2 text-sm text-white bg-gray-800 rounded-lg hover:bg-gray-900 sm:w-auto">
               Tambah Data +
             </button>
