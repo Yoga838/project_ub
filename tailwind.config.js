@@ -1,25 +1,6 @@
-// module.exports = {
-//   content: ["./src/**/*.{js,jsx,ts,tsx}"],
-//   darkMode: false, // or 'media' or 'class'
-//   theme: {
-//     extend: {
-//       colors: {
-//         primary: "#2E3D51",
-//         body: "#FFFFFF",
-//       },
-//     },
-//   },
-//   variants: {
-//     extend: {},
-//   },
-//   plugins: [],
-// };
-
-import typography from "@tailwindcss/typography";
-
-export default {
+module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
-  darkMode: false,
+  darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
       colors: {
@@ -31,5 +12,5 @@ export default {
   variants: {
     extend: {},
   },
-  plugins: [typography],
+  plugins: [],
 };

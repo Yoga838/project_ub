@@ -3,16 +3,11 @@ import { Link } from "react-router-dom";
 import Header from "../../../../component/dashboard/header";
 import bgRekamJejak from "../../../../assets/publikasiIMG.png";
 import FormInput from "../../../../component/dashboard/formInput/formInput";
-import ClassicEditorComponent from "../../../../custom/ClassicEditorComponent";
 
 export default function Add() {
   const [judul, setJudul] = useState("");
   const [deskripsi, setDeskripsi] = useState("");
   //   const [berita, setBerita] = useState("");
-  //   const [data, setData] = useState("");
-  const [editorData, setEditorData] = useState(
-    '<h2>Classic UI Demo</h2><p>This is an instance of the classic editor with a rich-text editor user interface just like the one from the <a href="https://github.com/ckeditor/ckeditor5-demos/tree/master/user-interface-classic">official CKEditor 5 demo</a>.</p>'
-  );
 
   return (
     <>
@@ -56,13 +51,6 @@ export default function Add() {
                 value={deskripsi}
                 onChange={(e) => setDeskripsi(e.target.value)}
                 placeholder="Deskripsi"
-              />
-            </div>
-
-            <div className="">
-              <ClassicEditorComponent
-                data={editorData}
-                onChange={setEditorData}
               />
             </div>
 
