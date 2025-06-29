@@ -1,0 +1,11 @@
+/* Menyesuaikan border radius & warna fokus agar cocok dengan Tailwind */
+:root {
+  --ck-border-radius: 0.5rem; /* rounded-lg */
+  --ck-color-focus-border: #2563eb; /* blue-600 */
+  --ck-color-base-border: #d1d5db; /* gray-300 */
+}
+
+/* Mengatur tinggi minimal area penulisan */
+.ck-editor__editable_inline {
+  min-height: 300px;
+}

@@ -26,6 +26,7 @@ import Edit_2 from "./pages/dashboard/pagesWork/edit/edit_2";
 import Edit_3 from "./pages/dashboard/pagesWork/edit/edit_3";
 import Edit_4 from "./pages/dashboard/pagesWork/edit/edit_4";
 import PagesDukungan from "./pages/dashboard/pagesDukungan";
+import AddRekamJejak from "./pages/dashboard/pagesRekamJejak/add";
 
 function App() {
   return (
@@ -62,6 +63,7 @@ function App() {
             <Route path="Page 3" element={<Page_3 />} />
             <Route path="Page 4" element={<Page_4 />} />
           </Route>
+          <Route path="Add Rekam Jejak" element={<AddRekamJejak />} />
           <Route path="Edit Program Kerja" element={<Edit />}>
             <Route index element={<Edit_1 />} />
             <Route path="Edit 2" element={<Edit_2 />} />

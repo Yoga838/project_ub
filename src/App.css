@@ -1,5 +1,14 @@
 @import "tailwindcss";
 
+/* .App {
+  width: 70%;
+  margin: 50px auto;
+}
+
+.ck-editor__editable {
+  min-height: 300px;
+} */
+
 @theme {
   /* Color Primary */
   --color-primary-900: #151c25;

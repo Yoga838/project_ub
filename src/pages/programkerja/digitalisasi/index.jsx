@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../../../component/landing/navbar";
 import Footer from "../../../component/landing/footer";
-import imgHeader from "../../../assets/programkerja/internasionalisasi.png";
+import imgHeader from "../../../assets/programkerja/digitalisasi.png";
 import { useNavigate } from "react-router-dom";
 import {
   Notebook,
@@ -14,7 +14,7 @@ import {
   Instagram,
 } from "lucide-react";
 
-export default function Internasionalisasi() {
+export default function Digitalisasi() {
   const navigate = useNavigate();
   return (
     <>
@@ -40,11 +40,11 @@ export default function Internasionalisasi() {
             <div className="pt-20 mb-14">
               <div className="2xl:w-[520px] xl:w-[520px] md:w-[500px] w-[280px] text-center">
                 <h1 className="mt-20 text-lg font-medium text-white 2xl:text-3xl xl:text-3xl md:text-xl">
-                  Internasionalisasi Fakultas.
+                  Digitalisasi Administrasi dan Pelayanan Akademik.
                 </h1>
                 <p className="mt-2 text-sm text-white 2xl:text-md xl:text-md md:text-sm opacity-60">
-                  Meningkatkan daya saing global dengan memperluas jejaring
-                  internasional dalam pendidikan dan penelitian.
+                  Meningkatkan efisiensi dan transparansi dalam administrasi
+                  fakultas dengan pemanfaatan teknologi digital.
                 </p>
                 <div className="flex justify-center">
                   <div className="w-[120px] h-[5px] mt-8 bg-white rounded-full"></div>
@@ -61,9 +61,9 @@ export default function Internasionalisasi() {
                 <div className="flex justify-center border-0 2xl:w-[377px] xl:w-[377px] 2xl:h-[259px] xl:h-[259px] md:w-[300px] md:h-[220px] w-[300px] h-[220px] bg-white drop-shadow-sm rounded-[15px] p-5">
                   <div>
                     <div className="flex items-center justify-center gap-5">
-                      <ClipboardCheck className="text-gray-800 2xl:w-7 xl:w-7 md:w-5 2xl:h-7 xl:h-7 md:h-5" />
+                      <Notebook className="text-gray-800 2xl:w-7 xl:w-7 md:w-5 2xl:h-7 xl:h-7 md:h-5" />
                       <h7 className="text-sm font-medium text-gray-800 2xl:text-lg xl:text-lg md:text-sm">
-                        Student Exchange
+                        Paperless Administration
                       </h7>
                     </div>
                     <div className="">
@@ -72,8 +72,8 @@ export default function Internasionalisasi() {
                           <CircleArrowRight className="text-gray-800" />
                         </div>
                         <p className="text-xs 2xl:text-sm xl:text-sm md:text-xs text-gray-800/70">
-                          Mengadakan program pertukaran mahasiswa dengan
-                          universitas luar negeri.
+                          Mengurangi ketergantungan pada dokumen fisik dengan
+                          sistem berbasis digital.
                         </p>
                       </div>
                       <div className="flex items-center gap-2.5">
@@ -81,8 +81,8 @@ export default function Internasionalisasi() {
                           <CircleArrowRight className="text-gray-800" />
                         </div>
                         <p className="text-xs 2xl:text-sm xl:text-sm md:text-xs text-gray-800/70">
-                          Mengembangkan skema double degree dengan universitas
-                          mitra.
+                          Menerapkan tanda tangan elektronik dan sistem
+                          persetujuan online.
                         </p>
                       </div>
                     </div>
@@ -95,9 +95,9 @@ export default function Internasionalisasi() {
                 <div className="flex justify-center border-0 2xl:w-[377px] xl:w-[377px] 2xl:h-[259px] xl:h-[259px] md:w-[300px] md:h-[220px] w-[300px] h-[220px] bg-white drop-shadow-sm rounded-[15px] p-5">
                   <div>
                     <div className="flex items-center justify-center gap-5">
-                      <ClipboardCheck className="text-gray-800 2xl:w-7 xl:w-7 md:w-5 2xl:h-7 xl:h-7 md:h-5" />
+                      <ChartNoAxesColumnIncreasing className="text-gray-800 2xl:w-7 xl:w-7 md:w-5 2xl:h-7 xl:h-7 md:h-5" />
                       <h7 className="text-sm font-medium text-gray-800 2xl:text-lg xl:text-lg md:text-sm">
-                        Kurikulum Berbasis Global
+                        Portal Akademik yang Interaktif
                       </h7>
                     </div>
                     <div className="">
@@ -106,8 +106,8 @@ export default function Internasionalisasi() {
                           <CircleArrowRight className="text-gray-800" />
                         </div>
                         <p className="text-xs 2xl:text-sm xl:text-sm md:text-xs text-gray-800/70">
-                          Mengadaptasi kurikulum yang sesuai dengan standar
-                          internasional.
+                          Mengembangkan portal akademik dengan fitur yang lebih
+                          responsif dan mudah digunakan.
                         </p>
                       </div>
                       <div className="flex items-center gap-2.5">
@@ -115,8 +115,8 @@ export default function Internasionalisasi() {
                           <CircleArrowRight className="text-gray-800" />
                         </div>
                         <p className="text-xs 2xl:text-sm xl:text-sm md:text-xs text-gray-800/70">
-                          Menawarkan mata kuliah dengan bahasa pengantar
-                          bilingual (Indonesia-Inggris).
+                          Menyediakan fitur tracking progres akademik mahasiswa
+                          secara real-time.
                         </p>
                       </div>
                     </div>
@@ -131,7 +131,7 @@ export default function Internasionalisasi() {
                     <div className="flex items-center justify-center gap-5">
                       <ClipboardCheck className="text-gray-800 2xl:w-7 xl:w-7 md:w-5 2xl:h-7 xl:h-7 md:h-5" />
                       <h7 className="text-sm font-medium text-gray-800 2xl:text-lg xl:text-lg md:text-sm">
-                        Dosen dan Penelitian Asing
+                        Absensi Digital
                       </h7>
                     </div>
                     <div className="">
@@ -140,8 +140,7 @@ export default function Internasionalisasi() {
                           <CircleArrowRight className="text-gray-800" />
                         </div>
                         <p className="text-xs 2xl:text-sm xl:text-sm md:text-xs text-gray-800/70">
-                          Mengundang akademisi internasional sebagai pengajar
-                          dan pembicara dalam seminar atau kuliah tamu.
+                          Absensi Digital untuk Dosen dan Mahasiswa.
                         </p>
                       </div>
                       <div className="flex items-center gap-2.5">
@@ -149,8 +148,8 @@ export default function Internasionalisasi() {
                           <CircleArrowRight className="text-gray-800" />
                         </div>
                         <p className="text-xs 2xl:text-sm xl:text-sm md:text-xs text-gray-800/70">
-                          Mengadakan proyek riset bersama dengan universitas
-                          luar negeri.
+                          Menerapkan tanda tangan elektronik dan sistem
+                          persetujuan online.
                         </p>
                       </div>
                     </div>
