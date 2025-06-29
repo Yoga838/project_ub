@@ -64,7 +64,7 @@ export default function Sidebar() {
               <Link to="/dashboard/dukungan">
                 <SidebarItem icon={<Megaphone size={18} />} label="Dukungan" />
               </Link>
-              <Link to="/dashboard/rekamjejak">
+              <Link to="/dashboard/tentangsaya">
                 <SidebarItem icon={<User size={18} />} label="Tentang Saya" />
               </Link>
               <Link to="/dashboard/pengaturan">

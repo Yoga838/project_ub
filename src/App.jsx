@@ -49,7 +49,7 @@ function App() {
           <Route index element={<PagesHome />} />
           <Route path="programkerja" element={<PagesWork />} />
           <Route path="dukungan" element={<PagesDukungan />} />
-          <Route path="rekamjejak" element={<PagesRekamJejak />} />
+          <Route path="tentangsaya" element={<PagesRekamJejak />} />
           <Route path="pengaturan" element={<PagesSetting />} />
           <Route path="Add Program Kerja" element={<Add />}>
             <Route index element={<Page_1 />} />
