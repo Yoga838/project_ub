@@ -58,7 +58,7 @@ export default function Page_3() {
             </p>
           </div>
           <div className="text-end mt-14">
-            <Link to="/dashboard/Add Program Kerja/Page 3">
+            <Link to="/dashboard/Edit Program Kerja/Edit 3">
               <button className="px-4 py-2 me-2.5 rounded-lg border border-primary-700 text-primary-700 text-sm font-medium hover:bg-gray-700 hover:text-white transition">
                 Kembali
               </button>

@@ -13,12 +13,17 @@ import Internasionalisasi from "./pages/programkerja/internasionalisasi";
 import Penguatan from "./pages/programkerja/penguatan";
 import Pendidikan from "./pages/about/pendidikan";
 import VisiMisi from "./pages/about/visiMisi";
+import PagesSetting from "./pages/dashboard/pagesSetting";
 import Add from "./pages/dashboard/pagesWork/add";
 import Page_1 from "./pages/dashboard/pagesWork/add/page_1";
-import PagesSetting from "./pages/dashboard/pagesSetting";
 import Page_2 from "./pages/dashboard/pagesWork/add/page_2";
 import Page_3 from "./pages/dashboard/pagesWork/add/page_3";
 import Page_4 from "./pages/dashboard/pagesWork/add/page_4";
+import Edit from "./pages/dashboard/pagesWork/edit";
+import Edit_1 from "./pages/dashboard/pagesWork/edit/edit_1";
+import Edit_2 from "./pages/dashboard/pagesWork/edit/edit_2";
+import Edit_3 from "./pages/dashboard/pagesWork/edit/edit_3";
+import Edit_4 from "./pages/dashboard/pagesWork/edit/edit_4";
 import PagesDukungan from "./pages/dashboard/pagesDukungan";
 
 function App() {
@@ -54,6 +59,12 @@ function App() {
             <Route path="Page 2" element={<Page_2 />} />
             <Route path="Page 3" element={<Page_3 />} />
             <Route path="Page 4" element={<Page_4 />} />
+          </Route>
+          <Route path="Edit Program Kerja" element={<Edit />}>
+            <Route index element={<Edit_1 />} />
+            <Route path="Edit 2" element={<Edit_2 />} />
+            <Route path="Edit 3" element={<Edit_3 />} />
+            <Route path="Edit 4" element={<Edit_4 />} />
           </Route>
         </Route>
         <Route path="/digitalisasi" element={<Digitalisasi />} />
