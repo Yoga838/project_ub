@@ -8,6 +8,7 @@ import Ketpen from "./pages/about/rekamJejak/ketpen/index";
 import Dashboard from "./pages/dashboard";
 import PagesHome from "./pages/dashboard/pagesHome";
 import PagesWork from "./pages/dashboard/pagesWork";
+import PagesRekamJejak from "./pages/dashboard/pagesRekamJejak";
 import Digitalisasi from "./pages/programkerja/digitalisasi";
 import Internasionalisasi from "./pages/programkerja/internasionalisasi";
 import Penguatan from "./pages/programkerja/penguatan";
@@ -48,6 +49,7 @@ function App() {
           <Route index element={<PagesHome />} />
           <Route path="programkerja" element={<PagesWork />} />
           <Route path="dukungan" element={<PagesDukungan />} />
+          <Route path="rekamjejak" element={<PagesRekamJejak />} />
           <Route path="pengaturan" element={<PagesSetting />} />
           <Route path="Add Program Kerja" element={<Add />}>
             <Route index element={<Page_1 />} />

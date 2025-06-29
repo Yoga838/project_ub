@@ -19,7 +19,7 @@ export default function Sidebar() {
     <>
       {/* Toggle Button (visible on mobile) */}
       <button
-        className="fixed top-4 left-4 z-50 md:hidden p-2 bg-primary-600 text-white rounded-md"
+        className="fixed z-50 p-2 text-white rounded-md top-4 left-4 md:hidden bg-primary-600"
         onClick={() => setIsOpen(!isOpen)}
       >
         {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -33,15 +33,15 @@ export default function Sidebar() {
           md:relative md:translate-x-0 md:flex
         `}
       >
-        <div className="w-full h-full flex flex-col justify-between py-10 items-center">
+        <div className="flex flex-col items-center justify-between w-full h-full py-10">
           {/* Profil */}
           <div className="flex flex-col items-center w-full px-6">
             <img
               src={profiling}
               alt="Profile"
-              className="w-16 h-16 rounded-full border-2 border-white object-cover mb-3"
+              className="object-cover w-16 h-16 mb-3 border-2 border-white rounded-full"
             />
-            <div className="text-center mb-6">
+            <div className="mb-6 text-center">
               <p className="font-semibold">Mohammad Iqbal</p>
               <p className="text-sm text-gray-300">iqbaal.xx@gmail.com</p>
             </div>
@@ -64,8 +64,10 @@ export default function Sidebar() {
               <Link to="/dashboard/dukungan">
                 <SidebarItem icon={<Megaphone size={18} />} label="Dukungan" />
               </Link>
-              <SidebarItem icon={<User size={18} />} label="Tentang Saya" />
-              <Link to = "/dashboard/pengaturan">
+              <Link to="/dashboard/rekamjejak">
+                <SidebarItem icon={<User size={18} />} label="Tentang Saya" />
+              </Link>
+              <Link to="/dashboard/pengaturan">
                 <SidebarItem icon={<Settings size={18} />} label="Pengaturan" />
               </Link>
             </nav>
