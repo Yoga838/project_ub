@@ -3,11 +3,13 @@ import { Link } from "react-router-dom";
 import Header from "../../../../component/dashboard/header";
 import bgRekamJejak from "../../../../assets/publikasiIMG.png";
 import FormInput from "../../../../component/dashboard/formInput/formInput";
+import { Editor } from "primereact/editor";
 
 export default function Add() {
   const [judul, setJudul] = useState("");
   const [deskripsi, setDeskripsi] = useState("");
   //   const [berita, setBerita] = useState("");
+  const [text, setText] = useState("");
 
   return (
     <>
@@ -52,6 +54,17 @@ export default function Add() {
                 onChange={(e) => setDeskripsi(e.target.value)}
                 placeholder="Deskripsi"
               />
+            </div>
+
+            <div className="mt-5">
+              <h2 className="text-lg mb-1">Berita</h2>
+              <div className="card">
+                <Editor
+                  value={text}
+                  onTextChange={(e) => setText(e.htmlValue)}
+                  style={{ height: "320px" }}
+                />
+              </div>
             </div>
 
             <div className="button my-7 flex justify-center">
