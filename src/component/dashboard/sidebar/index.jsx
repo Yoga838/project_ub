@@ -10,7 +10,7 @@ import {
   Menu,
   X,
 } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,27 +48,46 @@ export default function Sidebar() {
 
             {/* Menu Items */}
             <nav className="w-full space-y-4">
-              <Link to="/dashboard">
+              <Link to="/dashboard" onClick={() => setIsOpen(false)}>
                 <SidebarItem
                   icon={<Home size={18} />}
                   label="Dashboard"
-                  active
+                  to="/dashboard"
                 />
               </Link>
-              <Link to="/dashboard/programkerja">
+              <Link
+                to="/dashboard/programkerja"
+                onClick={() => setIsOpen(false)}
+              >
                 <SidebarItem
                   icon={<Monitor size={18} />}
                   label="Program Kerja"
+                  to="/dashboard/programkerja"
                 />
               </Link>
-              <Link to="/dashboard/dukungan">
-                <SidebarItem icon={<Megaphone size={18} />} label="Dukungan" />
+              <Link to="/dashboard/dukungan" onClick={() => setIsOpen(false)}>
+                <SidebarItem
+                  icon={<Megaphone size={18} />}
+                  label="Dukungan"
+                  to="/dashboard/dukungan"
+                />
               </Link>
-              <Link to="/dashboard/tentangsaya">
-                <SidebarItem icon={<User size={18} />} label="Tentang Saya" />
+              <Link
+                to="/dashboard/tentangsaya"
+                onClick={() => setIsOpen(false)}
+              >
+                <SidebarItem
+                  icon={<User size={18} />}
+                  label="Tentang Saya"
+                  to="/dashboard/tentangsaya"
+                />
               </Link>
-              <Link to="/dashboard/pengaturan">
-                <SidebarItem icon={<Settings size={18} />} label="Pengaturan" />
+              <Link to="/dashboard/pengaturan" onClick={() => setIsOpen(false)}>
+                <SidebarItem
+                  icon={<Settings size={18} />}
+                  label="Pengaturan"
+                  to="/dashboard/pengaturan"
+                />
               </Link>
             </nav>
           </div>
@@ -83,11 +102,14 @@ export default function Sidebar() {
   );
 }
 
-function SidebarItem({ icon, label, active = false }) {
+function SidebarItem({ icon, label, to }) {
+  const location = useLocation();
+  const isActive = location.pathname === to;
+
   return (
     <div
       className={`flex items-center gap-3 px-3 py-2 cursor-pointer rounded-md transition-all ${
-        active
+        isActive
           ? "bg-gradient-to-r from-primary-400 to-primary-600 text-white font-semibold"
           : "text-gray-300 hover:bg-gradient-to-r from-primary-400 to-primary-600"
       }`}
