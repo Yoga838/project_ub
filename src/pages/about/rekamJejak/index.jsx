@@ -37,7 +37,10 @@ const RekamJejak = () => {
             ini mencerminkan komitmen beliau dalam membawa perubahan serta
             mendorong kemajuan pendidikan dan masyarakat.
           </p>
-          <button className="w-[200px] px-6 py-2 text-white bg-transparent rounded-[15px] border border-white hover:bg-white hover:text-black transition">
+          <button
+            onClick={() => navigate("/#kontak")}
+            className="w-[200px] px-6 py-2 text-white bg-transparent rounded-[15px] border border-white hover:bg-white hover:text-black transition"
+          >
             Kontak
           </button>
         </div>
