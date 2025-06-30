@@ -9,8 +9,24 @@ import UB from "../assets/UB.png";
 import imgStar1 from "../assets/icons/Star 1.svg";
 import { Link } from "react-router-dom";
 import { Mail, Phone, Instagram } from "lucide-react";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 export default function Test() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace("#", "");
+      const element = document.getElementById(id);
+      if (element) {
+        // Delay untuk memastikan komponen sudah render
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      }
+    }
+  }, [location]);
   return (
     <>
       <Navbar />
@@ -22,21 +38,21 @@ export default function Test() {
             <img
               src={Pattern}
               alt=""
-              className="absolute inset-0 w-full h-full object-cover"
+              className="absolute inset-0 object-cover w-full h-full"
             />
           </div>
 
           {/* Foreground Content */}
-          <div className="z-10 flex items-center h-screen xl:px-20 md:px-10 px-10 relative">
+          <div className="relative z-10 flex items-center h-screen px-10 xl:px-20 md:px-10">
             <div className="grid grid-cols-12">
               {/* Left Content */}
-              <div className="2xl:col-span-6 xl:col-span-6 md:col-span-6 col-span-12 flex justify-center md:justify-center xl:justify-start items-center text-center md:text-left">
+              <div className="flex items-center justify-center col-span-12 text-center 2xl:col-span-6 xl:col-span-6 md:col-span-6 md:justify-center xl:justify-start md:text-left">
                 <div className="">
                   <div className="relative">
                     <div className="hidden md:block absolute 2xl:left-[420px] xl:left-[420px] md:left-[280px] top-[-30px]">
                       <img src={imgStar1} alt="" />
                     </div>
-                    <h1 className="2xl:text-4xl xl:text-4xl lg:text-2xl md:text-xl text-xl font-bold text-gray-700 leading-snug">
+                    <h1 className="text-xl font-bold leading-snug text-gray-700 2xl:text-4xl xl:text-4xl lg:text-2xl md:text-xl">
                       MEMBAWA{" "}
                       <span className="text-blue-700 underline break-inside-avoid-column">
                         PERUBAHAN
@@ -44,19 +60,19 @@ export default function Test() {
                       <br />
                       MEWUJUDKAN MASA DEPAN.
                     </h1>
-                    <p className="mt-4 2xl:text-base xl:text-base md:text-sm text-sm text-gray-700">
+                    <p className="mt-4 text-sm text-gray-700 2xl:text-base xl:text-base md:text-sm">
                       Dedikasi dan inovasi untuk masa depan kampus yang lebih
                       maju.
                     </p>
                   </div>
-                  <div className="mt-6 flex flex-col md:flex-row gap-4 md:justify-start justify-center">
+                  <div className="flex flex-col justify-center gap-4 mt-6 md:flex-row md:justify-start">
                     <a href="#programkerja">
-                      <button className="bg-gray-900 text-white px-6 py-2 rounded-lg font-medium hover:bg-gray-800 transition">
+                      <button className="px-6 py-2 font-medium text-white transition bg-gray-900 rounded-lg hover:bg-gray-800">
                         Program Kerja
                       </button>
                     </a>
                     <a href="#kontak">
-                      <button className="border border-gray-400 text-gray-700 px-6 py-2 rounded-lg font-medium hover:bg-gray-100 transition">
+                      <button className="px-6 py-2 font-medium text-gray-700 transition border border-gray-400 rounded-lg hover:bg-gray-100">
                         Kontak
                       </button>
                     </a>
@@ -65,8 +81,8 @@ export default function Test() {
               </div>
 
               {/* Right Content */}
-              <div className="col-span-6 2xl:block xl:block lg:block md:block hidden">
-                <div className="relative xl:mt-20 md:mt-10 mt-10">
+              <div className="hidden col-span-6 2xl:block xl:block lg:block md:block">
+                <div className="relative mt-10 xl:mt-20 md:mt-10">
                   <img
                     src={Hero_1}
                     alt="Foto"
@@ -76,19 +92,19 @@ export default function Test() {
                     <div className="flex justify-center h-full">
                       <div className="flex 2xl:gap-[100px] xl:gap-[60px] lg:gap-[20px] md:gap-[15px] text-center items-center text-white">
                         <div>
-                          <div className="2xl:text-5xl xl:text-5xl font-normal pb-1">
+                          <div className="pb-1 font-normal 2xl:text-5xl xl:text-5xl">
                             5+
                           </div>
                           <div className="text-sm">Penelitian</div>
                         </div>
                         <div>
-                          <div className="2xl:text-5xl xl:text-5xl font-normal pb-1">
+                          <div className="pb-1 font-normal 2xl:text-5xl xl:text-5xl">
                             3+
                           </div>
                           <div className="text-sm">Pengabdian Masyarakat</div>
                         </div>
                         <div>
-                          <div className="2xl:text-5xl xl:text-5xl font-normal pb-1">
+                          <div className="pb-1 font-normal 2xl:text-5xl xl:text-5xl">
                             5+
                           </div>
                           <div className="text-sm">Publikasi</div>
@@ -103,28 +119,28 @@ export default function Test() {
         </div>
       </section>
 
-      <section id="about" className="xl:my-20 md:my-10 my-10">
+      <section id="about" className="my-10 xl:my-20 md:my-10">
         <div className="">
           <div className="grid grid-cols-12">
             {/* foto kiri */}
-            <div className="col-span-5 xl:block md:hidden hidden">
+            <div className="hidden col-span-5 xl:block md:hidden">
               <img
                 src={Hero_2}
                 alt="foto"
                 className="w-[70%] object-cover mx-auto"
               />
             </div>
-            <div className="xl:col-span-7 md:col-span-12 col-span-12">
-              <div className="flex xl:justify-normal md:justify-center justify-center">
-                <div className="xl:pr-20 md:pr-10 pr-10 xl:px-0 md:px-10 px-10">
-                  <h1 className="xl:text-4xl md:text-2xl text-xl font-bold">
+            <div className="col-span-12 xl:col-span-7 md:col-span-12">
+              <div className="flex justify-center xl:justify-normal md:justify-center">
+                <div className="px-10 pr-10 xl:pr-20 md:pr-10 xl:px-0 md:px-10">
+                  <h1 className="text-xl font-bold xl:text-4xl md:text-2xl">
                     Lebih Dekat dengan Mohammad Iqbal.
                   </h1>
-                  <h2 className="pt-2 xl:text-2xl md:text-xl text-lg font-semibold">
+                  <h2 className="pt-2 text-lg font-semibold xl:text-2xl md:text-xl">
                     Visi, Kolaborasi, Inovasi untuk FIA UB Maju
                   </h2>
                   <div className="py-10">
-                    <p className="xl:text-lg md:text-lg text-base text-justify">
+                    <p className="text-base text-justify xl:text-lg md:text-lg">
                       Mohammad Iqbal adalah sosok pemimpin visioner yang
                       memiliki komitmen kuat dalam membawa perubahan positif.
                       Dengan pengalaman dan dedikasinya di dunia akademik serta
@@ -132,7 +148,7 @@ export default function Test() {
                       sistem pendidikan, tata kelola, dan pengembangan sumber
                       daya manusia.
                     </p>
-                    <p className="pt-5 xl:text-lg md:text-lg text-base text-justify">
+                    <p className="pt-5 text-base text-justify xl:text-lg md:text-lg">
                       Sebagai individu yang percaya pada kekuatan visi,
                       kolaborasi, dan inovasi, Mohammad Iqbal bertekad untuk
                       menjadikan FIA UB sebagai institusi yang unggul, adaptif,
@@ -141,9 +157,9 @@ export default function Test() {
                     </p>
                   </div>
                   {/* Kotak tentang saya */}
-                  <div className="max-w-6xl mx-auto py-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div className="grid max-w-6xl grid-cols-1 gap-6 py-12 mx-auto md:grid-cols-3">
                     {/* <!-- Kartu 1 --> */}
-                    <div className="bg-white border border-primary-50 hover:border-primary-700 rounded-xl p-6 shadow-sm">
+                    <div className="p-6 bg-white border shadow-sm border-primary-50 hover:border-primary-700 rounded-xl">
                       <div className="flex items-center gap-3 mb-4">
                         {/* <!-- Ikon --> */}
                         <svg
@@ -167,7 +183,7 @@ export default function Test() {
                           Rekam Jejak
                         </h3>
                       </div>
-                      <p className="text-gray-600 mb-6">
+                      <p className="mb-6 text-gray-600">
                         Kisah Mohammad Iqbal untuk kemajuan FIA UB
                       </p>
                       <Link
@@ -186,7 +202,7 @@ export default function Test() {
                     </div>
 
                     {/* <!-- Kartu 2 (Aktif) --> */}
-                    <div className="bg-white border border-primary-50 hover:border-primary-700 rounded-xl p-6 shadow-sm">
+                    <div className="p-6 bg-white border shadow-sm border-primary-50 hover:border-primary-700 rounded-xl">
                       <div className="flex items-center gap-3 mb-4">
                         {/* <!-- Ikon --> */}
                         <svg
@@ -204,7 +220,7 @@ export default function Test() {
                           Pendidikan
                         </h3>
                       </div>
-                      <p className="text-gray-600 mb-6">
+                      <p className="mb-6 text-gray-600">
                         Perjalanan singkat dari Mohammad Iqbal
                       </p>
                       <Link
@@ -223,7 +239,7 @@ export default function Test() {
                     </div>
 
                     {/* <!-- Kartu 3 --> */}
-                    <div className="bg-white border border-primary-50 hover:border-primary-700 rounded-xl p-6 shadow-sm">
+                    <div className="p-6 bg-white border shadow-sm border-primary-50 hover:border-primary-700 rounded-xl">
                       <div className="flex items-center gap-3 mb-4">
                         {/* <!-- Ikon --> */}
                         <svg
@@ -241,7 +257,7 @@ export default function Test() {
                           Visi & Misi
                         </h3>
                       </div>
-                      <p className="text-gray-600 mb-6">
+                      <p className="mb-6 text-gray-600">
                         Perjalanan singkat dari Mohammad Iqbal
                       </p>
                       <Link
@@ -435,7 +451,7 @@ export default function Test() {
                       d="M13 2.5a1.5 1.5 0 0 1 3 0v11a1.5 1.5 0 0 1-3 0v-.214c-2.162-1.241-4.49-1.843-6.912-2.083l.405 2.712A1 1 0 0 1 5.51 15.1h-.548a1 1 0 0 1-.916-.599l-1.85-3.49l-.202-.003A2.014 2.014 0 0 1 0 9V7a2.02 2.02 0 0 1 1.992-2.013a75 75 0 0 0 2.483-.075c3.043-.154 6.148-.849 8.525-2.199zm1 0v11a.5.5 0 0 0 1 0v-11a.5.5 0 0 0-1 0m-1 1.35c-2.344 1.205-5.209 1.842-8 2.033v4.233q.27.015.537.036c2.568.189 5.093.744 7.463 1.993zm-9 6.215v-4.13a95 95 0 0 1-1.992.052A1.02 1.02 0 0 0 1 7v2c0 .55.448 1.002 1.006 1.009A61 61 0 0 1 4 10.065m-.657.975l1.609 3.037l.01.024h.548l-.002-.014l-.443-2.966a68 68 0 0 0-1.722-.082z"
                     />
                   </svg>
-                  <h2 className="ml-2 xl:text-5xl md:text-2xl text-2xl">
+                  <h2 className="ml-2 text-2xl xl:text-5xl md:text-2xl">
                     Suarakan Dukunganmu!
                   </h2>
                 </div>

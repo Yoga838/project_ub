@@ -4,8 +4,11 @@ import Footer from "../../../component/landing/footer";
 import banner from "../../../assets/banner-pendidikan.png";
 import Breadcumb from "../../../component/landing/breadcumb";
 import { BookOpen, Mail, Phone, Instagram } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export default function Pendidikan() {
+  const navigate = useNavigate();
+
   return (
     <>
       <Navbar />
@@ -14,15 +17,15 @@ export default function Pendidikan() {
         <img
           src={banner}
           alt="Banner Pendidikan"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 object-cover w-full h-full"
         />
 
         {/* Overlay */}
-        <div className="relative z-10 inset-0 bg-primary-700/70 flex flex-col items-center justify-center text-white text-center px-4 sm:px-6 md:px-8 py-6 sm:py-10 min-h-screen">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">
+        <div className="relative inset-0 z-10 flex flex-col items-center justify-center min-h-screen px-4 py-6 text-center text-white bg-primary-700/70 sm:px-6 md:px-8 sm:py-10">
+          <h1 className="mb-4 text-3xl font-bold md:text-4xl">
             Riwayat Pendidikan <br /> Mohammad Iqbal
           </h1>
-          <p className="max-w-xl sm:max-w-2xl md:max-w-4xl mb-6 text-sm sm:text-base leading-relaxed">
+          <p className="max-w-xl mb-6 text-sm leading-relaxed sm:max-w-2xl md:max-w-4xl sm:text-base">
             Mohammad Iqbal telah melalui perjalanan akademik yang panjang dan
             penuh dedikasi di bidang administrasi publik. Dengan minat mendalam
             terhadap kebijakan publik, tata kelola pemerintahan, dan reformasi
@@ -33,7 +36,10 @@ export default function Pendidikan() {
             penelitian serta kontribusi akademik yang berdampak luas bagi
             masyarakat dan pemerintah.
           </p>
-          <button className="w-[200px] px-6 py-2 text-white bg-transparent rounded-[15px] border border-white hover:bg-white hover:text-black transition">
+          <button
+            onClick={() => navigate("/#kontak")}
+            className="w-[200px] px-6 py-2 text-white bg-transparent rounded-[15px] border border-white hover:bg-white hover:text-black transition"
+          >
             Kontak
           </button>
         </div>
@@ -42,18 +48,18 @@ export default function Pendidikan() {
       <Breadcumb />
 
       {/* Layout kanan kiri */}
-      <div className="flex flex-col md:flex-row px-10 md:px-16 mt-2 mb-20 gap-10">
+      <div className="flex flex-col gap-10 px-10 mt-2 mb-20 md:flex-row md:px-16">
         {/* Kiri: Riwayat Pendidikan */}
         <div className="md:w-2/3 space-y-14">
           {/* S1 */}
           <div>
-            <div className="flex items-center space-x-2 text-primary-800 font-semibold">
+            <div className="flex items-center space-x-2 font-semibold text-primary-800">
               <BookOpen className="w-5 h-5" />
               <span className="text-lg">
                 (S1) Administrasi Publik - Universitas Brawijaya
               </span>
             </div>
-            <p className="text-md leading-relaxed mt-5 text-primary-300 font-normal">
+            <p className="mt-5 font-normal leading-relaxed text-md text-primary-300">
               “Pada jenjang sarjana, Mohammad Iqbal mulai memperdalam pemahaman
               mengenai konsep dasar administrasi publik, kebijakan pemerintah,
               serta manajemen organisasi sektor publik. Ia aktif dalam berbagai
@@ -67,14 +73,14 @@ export default function Pendidikan() {
 
           {/* MIB */}
           <div>
-            <div className="flex items-center space-x-2 text-primary-800 font-semibold">
+            <div className="flex items-center space-x-2 font-semibold text-primary-800">
               <BookOpen className="w-5 h-5" />
               <span className="text-lg">
                 MIB: Graduate School of Business, University of Wollongong,
                 Australia
               </span>
             </div>
-            <p className="text-md leading-relaxed mt-5 text-primary-300 font-normal">
+            <p className="mt-5 font-normal leading-relaxed text-md text-primary-300">
               “Setelah menyelesaikan pendidikan S1, Mohammad Iqbal melanjutkan
               studi ke jenjang magister di Universitas Indonesia dengan fokus
               pada reformasi birokrasi dan kebijakan berbasis data. Pada jenjang
@@ -92,14 +98,14 @@ export default function Pendidikan() {
 
           {/* DBA */}
           <div>
-            <div className="flex items-center space-x-2 text-primary-800 font-semibold">
+            <div className="flex items-center space-x-2 font-semibold text-primary-800">
               <BookOpen className="w-5 h-5" />
               <span className="text-lg">
                 DBA: Victoria Business School, Victoria University, Melbourne,
                 Australia
               </span>
             </div>
-            <p className="text-md leading-relaxed mt-5 text-primary-300 font-normal">
+            <p className="mt-5 font-normal leading-relaxed text-md text-primary-300">
               “Setelah menyelesaikan pendidikan S1, Mohammad Iqbal melanjutkan
               studi ke jenjang magister di Universitas Indonesia dengan fokus
               pada reformasi birokrasi dan kebijakan berbasis data. Pada jenjang
@@ -117,14 +123,14 @@ export default function Pendidikan() {
         </div>
 
         {/* Kanan: Profil Ringkas */}
-        <div className="md:w-1/3 bg-gray-100 p-6 rounded-xl shadow-md h-fit px-15 py-12">
-          <h2 className="text-2xl font-bold text-primary-700 mb-6">
+        <div className="p-6 py-12 bg-gray-100 shadow-md md:w-1/3 rounded-xl h-fit px-15">
+          <h2 className="mb-6 text-2xl font-bold text-primary-700">
             Mohammad Iqbal
           </h2>
-          <p className="text-lg text-primary-700 font-semibold mb-6">
+          <p className="mb-6 text-lg font-semibold text-primary-700">
             Membawa Perubahan, Mewujudkan Masa Depan
           </p>
-          <p className="text-primary-300 text-sm leading-relaxed mb-6">
+          <p className="mb-6 text-sm leading-relaxed text-primary-300">
             “Perubahan adalah kunci menuju kemajuan. Dengan semangat inovasi dan
             kepemimpinan yang visioner, kita berkomitmen untuk membawa
             transformasi positif dalam pendidikan, riset, dan tata kelola
